@@ -32,6 +32,43 @@ Eleven contracts deployed and wired (`agentpay/contracts/addresses/qieTestnet.js
 
 End-to-end proof with real transactions: `agentpay/contracts/addresses/e2e_proof_qieTestnet.json`.
 
+## Build an agent that pays (X-05 SDK + X-06 reference agents)
+
+Agents pay APIs the way users tap a card — but with on-chain caps and a
+refund window. The `@agentpay/sdk` typed client covers the whole flow:
+**discover → pay → verify → refund**.
+
+```ts
+import { AgentPayClient } from "@agentpay/sdk";
+
+const agent = new AgentPayClient({ privateKey: process.env.AGENT_PRIVATE_KEY! });
+const res = await agent.buyAndCall("http://localhost:3030", "weather-basic", {
+  mandateId: 2, // your pre-funded mandate (per-call cap + daily cap on-chain)
+});
+console.log(res.data);                    // paid payload — seller verified your tx on-chain
+await agent.verify(res.onChain!.txHash);  // check the settlement yourself
+await agent.refund(res.onChain!.callId);  // dispute within the 600 s window
+```
+
+Caps are **reverts, not UI promises**: exceed a mandate's per-call or daily
+cap and you get a typed `AgentPayError` (`PER_CALL_CAP`, `DAILY_CAP`,
+`MANDATE_BALANCE`, …) — pre-flighted so no gas is burned. Full guide:
+[`agentpay/agent/sdk/README.md`](agentpay/agent/sdk/README.md).
+
+**Three reference agents run end-to-end on testnet 1983**
+(`agentpay/agent/examples/`, driven with `bun`):
+
+| agent | what it proves (2026-09-15 trace) |
+|-------|-----------------------------------|
+| `shopping-agent.ts` | agent buys goods at a QR store — pays the exact EIP-681 amount, matcher auto-books PAID in 8.3 s |
+| `data-buyer-agent.ts` | full x402: 402 terms → `payForCall` (callId/escrow on-chain) → seller verifies tx LIVE → self-verify → **replayed tx hash rejected** → principal refund mined |
+| `ticket-buyer-agent.ts` | mandate controls: buys tickets until the daily cap blocks ticket #3 as a typed `DAILY_CAP` — zero gas wasted, nothing bypassed |
+
+```bash
+cd agentpay/agent
+AGENT_PRIVATE_KEY=0x… MANDATE_ID=2 bun examples/data-buyer-agent.ts
+```
+
 ## Architecture
 
 ```
@@ -94,9 +131,10 @@ src/components/merchant/ login, cash register, ops (invoices/subs/payout), machi
 prisma/                  schema (merchants, sessions, nonces, passkeys, settings)
 agentpay/contracts/      11 Solidity contracts + deploy/e2e scripts + 45-case test suite
 agentpay/indexer/        viem event poller → idempotent SQLite ledger
-agentpay/agent/          reference AI-agent client (mandate + x402 flow)
+agentpay/agent/sdk/      @agentpay/sdk — typed agent client (discover/pay/verify/refund, X-05)
+agentpay/agent/examples/ 3 reference agents: shopping, data-buyer, ticket-buyer (X-06)
 agentpay/docs/           whitepaper, deploy guide, demo script
-mini-services/           standalone x402 endpoint service
+mini-services/           standalone x402 endpoint service (single-use callId replay guard)
 ```
 
 ## Hackathon

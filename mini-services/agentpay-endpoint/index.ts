@@ -50,6 +50,11 @@ const REFUND_WINDOW_SECONDS = 600; // matches EscrowCore default
 const calls = new Map<string, CallRecord>();
 let callSeq = 1;
 
+// P3 hardening (Master Plan ch.5.3): callId is SINGLE-USE. A tx hash that
+// already settled a call is rejected on replay — the same payment can never
+// buy a second payload. Tracked per tx hash (live) and per call record.
+const usedTxHashes = new Set<string>();
+
 const PRODUCTS: Record<string, Product> = {
   "weather-basic": {
     key: "weather-basic",
@@ -220,11 +225,15 @@ app.post("/v1/product/:key/purchase", async (c) => {
   let onchain: Record<string, unknown> | null = null;
   if (process.env.CHAIN_MODE === "live") {
     mode = "live";
+    if (usedTxHashes.has(payment.toLowerCase())) {
+      return c.json({ error: "tx_already_used", reason: "callId is single-use — replaying a settled tx buys nothing" }, 402);
+    }
     const rpc = process.env.QIE_RPC_URL || "https://rpc1testnet.qie.digital/";
     const payEndpoint = process.env.PAY_ENDPOINT_ADDRESS || "";
     const result = await verifyPayForCallTx(rpc, payEndpoint, payment, p.onChainProductId ?? 1);
     verified = result.ok;
     onchain = result.info;
+    if (verified) usedTxHashes.add(payment.toLowerCase());
   }
 
   if (!verified) return c.json({ error: "invalid_payment", onchain }, 402);
@@ -266,11 +275,22 @@ app.post("/v1/product/:key/purchase", async (c) => {
 });
 
 // ---------- refund within window (the x402 killer feature) ----------
-app.post("/v1/call/:id/refund", (c) => {
+app.post("/v1/call/:id/refund", async (c) => {
   const rec = calls.get(c.req.param("id"));
   if (!rec) return c.json({ error: "not_found" }, 404);
   if (rec.status !== "SETTLED") return c.json({ error: "already_" + rec.status.toLowerCase() }, 409);
   if (Date.now() > rec.deadline) return c.json({ error: "refund_window_closed" }, 403);
+
+  // live mode: the REAL refund is the on-chain escrow refund — the seller
+  // only records it after seeing the refundCall tx hash as proof.
+  if (rec.escrowRef.startsWith("escrow#") && process.env.CHAIN_MODE === "live") {
+    const body = await c.req.json().catch(() => ({} as { refundTxHash?: string }));
+    const refundTx = (body as { refundTxHash?: string })?.refundTxHash || "";
+    if (!/^0x[a-fA-F0-9]{64}$/.test(refundTx)) {
+      return c.json({ error: "refund_tx_required", reason: "post the on-chain refundCall tx hash as { refundTxHash }" }, 400);
+    }
+    rec.escrowRef += ` (refunded on-chain: ${refundTx.slice(0, 14)}…)`;
+  }
 
   rec.status = "REFUNDED";
   return c.json({ ok: true, callId: rec.id, refunded: `${(rec.amountCents / 100).toFixed(2)} ZAR`, escrowRef: rec.escrowRef });
