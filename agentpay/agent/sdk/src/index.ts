@@ -10,9 +10,10 @@
 export { AgentPayClient, decodeCallPaid } from "./client.js";
 export type { AgentPayClientOptions, BuyOptions } from "./client.js";
 export { NETWORKS, defaultNetwork } from "./chains.js";
-export { AgentPayError, toAgentPayError } from "./errors.js";
+export { AgentPayError, toAgentPayError, httpErrorToAgentPayError } from "./errors.js";
 export type { AgentPayErrorCode } from "./errors.js";
 export type {
   Catalog, ProductInfo, Terms, Quote, CallReceipt, PurchaseResult,
   VerifyResult, MandateSnapshot, NetworkConfig,
+  TicketEvent, TicketPayload, RedemptionProof, TicketStatusResult, TicketPurchase,
 } from "./types.js";

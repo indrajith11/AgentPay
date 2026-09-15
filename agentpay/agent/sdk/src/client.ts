@@ -19,7 +19,7 @@
  */
 import { ethers } from "ethers";
 import { NETWORKS, defaultNetwork } from "./chains.js";
-import { AgentPayError, toAgentPayError } from "./errors.js";
+import { AgentPayError, httpErrorToAgentPayError, toAgentPayError } from "./errors.js";
 import type {
   CallReceipt,
   Catalog,
@@ -28,7 +28,11 @@ import type {
   ProductInfo,
   PurchaseResult,
   Quote,
+  RedemptionProof,
   Terms,
+  TicketPayload,
+  TicketPurchase,
+  TicketStatusResult,
   VerifyResult,
 } from "./types.js";
 
@@ -47,6 +51,19 @@ const PAY_ENDPOINT_ABI = [
   "error TokenMismatch()", "error CallNotOpen()", "error StaleFeed()", "error NoFeed()",
   "error NotUsdPriced()", "error WrongAmount()", "error NotProductMerchant()",
 ];
+
+/**
+ * QIE's estimateGas returns the EXACT execution cost — zero headroom. Our
+ * pay paths nest 2-3 contracts deep (PayEndpoint -> MandateVault/EscrowCore
+ * -> CreditPassport), so the deepest subcall can hit the EIP-150 63/64 gas
+ * wall on-chain even though it simulates fine. Sending with ~1.5x the
+ * estimate + a flat buffer removes the whole class (gas is 7 wei/unit here —
+ * headroom is free; a dead revert is not).
+ */
+async function withGasHeadroom(estimate: Promise<bigint>, fallbackGas: bigint): Promise<{ gasLimit: bigint }> {
+  const est = await estimate.catch(() => fallbackGas);
+  return { gasLimit: (est * 3n) / 2n + 100_000n };
+}
 const MANDATE_VAULT_ABI = [
   // exact MandateVault.Mandate order: id, principal, agent, token, perCallCap, dailyCap, spentToday, currentDay, balance, active, createdAt
   "function mandates(uint256 id) view returns (uint256 id, address principal, address agent, address token, uint256 perCallCap, uint256 dailyCap, uint256 spentToday, uint256 currentDay, uint256 balance, bool active, uint64 createdAt)",
@@ -193,7 +210,11 @@ export class AgentPayClient {
     }
     let tx: ethers.ContractTransactionResponse;
     try {
-      tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall(mandateId, productId, t);
+      const overrides = await withGasHeadroom(
+        (this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall.estimateGas(mandateId, productId, t),
+        600_000n
+      );
+      tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall(mandateId, productId, t, overrides);
     } catch (e) {
       throw toAgentPayError(e, `payForCall(mandate=${mandateId}, product=${productId})`);
     }
@@ -218,7 +239,7 @@ export class AgentPayClient {
           { mandateId, amountWei: q.amountWei.toString(), reason: pre.reason }
         );
       }
-      tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall(mandateId, productId, t);
+      tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall(mandateId, productId, t, await withGasHeadroom((this.payEndpoint.connect(this.signer) as ethers.Contract).payForCall.estimateGas(mandateId, productId, t).catch(() => Promise.resolve(600_000n)), 600_000n));
       rec = await tx.wait().catch(() => null);
     }
     if (!rec || rec.status !== 1) {
@@ -266,9 +287,7 @@ export class AgentPayClient {
       signal: AbortSignal.timeout(opts.timeoutMs ?? 15_000),
     });
     const j = await res.json().catch(() => ({}));
-    if (res.status === 402) throw new AgentPayError("INVALID_PAYMENT", "seller rejected the payment", j);
-    if (res.status === 404) throw new AgentPayError("PRODUCT_NOT_FOUND", `no product '${productKey}' at ${baseUrl}`);
-    if (!res.ok) throw new AgentPayError("HTTP_ERROR", `purchase failed with ${res.status}`, j);
+    if (!res.ok) throw httpErrorToAgentPayError(res.status, j, `purchase(${productKey})`);
     return j as PurchaseResult;
   }
 
@@ -310,6 +329,61 @@ export class AgentPayClient {
   }
 
   // ------------------------------------------------------------------
+  // P4 — REAL-WORLD GOODS: buy + redeem a ticket
+  // ------------------------------------------------------------------
+
+  /**
+   * One-liner for real-world goods: buyAndCall + pull the typed ticket out
+   * of the payload. The returned `ticket.secret` IS the ticket — the agent
+   * presents it at the gate; the venue redeems it single-use.
+   */
+  async buyTicket(baseUrl: string, productKey: string, opts: BuyOptions): Promise<TicketPurchase> {
+    const res = await this.buyAndCall(baseUrl, productKey, opts);
+    const data = res.data as { ticket?: TicketPayload } | null;
+    if (!data?.ticket?.ticketId || !data.ticket.secret) {
+      throw new AgentPayError("HTTP_ERROR", `seller did not mint a ticket for '${productKey}' (kind != ticket?)`, { data: res.data ?? null });
+    }
+    return { ...res, ticket: data.ticket };
+  }
+
+  /**
+   * THE gate leg: present the ticket secret at the venue. Single-use — a
+   * replayed secret is rejected (TICKET_ALREADY_REDEEMED); a forged one is
+   * rejected (TICKET_INVALID_SECRET); a refunded escrow voids the ticket
+   * (TICKET_VOID). Success returns a signed-style redemption proof bound to
+   * the on-chain callId.
+   */
+  async redeemTicket(
+    baseUrl: string,
+    ticketId: string,
+    secret: string,
+    opts: { timeoutMs?: number } = {}
+  ): Promise<RedemptionProof> {
+    const res = await fetch(`${baseUrl.replace(/\/$/, "")}/v1/ticket/${ticketId}/redeem`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ secret }),
+      signal: AbortSignal.timeout(opts.timeoutMs ?? 15_000),
+    });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok) throw httpErrorToAgentPayError(res.status, j, `redeemTicket(${ticketId})`);
+    return j as RedemptionProof;
+  }
+
+  /**
+   * Ticket state WITHOUT the secret — venues, auditors or the agent itself
+   * can check VALID / REDEEMED / VOID at any time.
+   */
+  async ticketStatus(baseUrl: string, ticketId: string, opts: { timeoutMs?: number } = {}): Promise<TicketStatusResult> {
+    const res = await fetch(`${baseUrl.replace(/\/$/, "")}/v1/ticket/${ticketId}`, {
+      signal: AbortSignal.timeout(opts.timeoutMs ?? 15_000),
+    });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok) throw httpErrorToAgentPayError(res.status, j, `ticketStatus(${ticketId})`);
+    return (j as { ticket: TicketStatusResult }).ticket;
+  }
+
+  // ------------------------------------------------------------------
   // VERIFY
   // ------------------------------------------------------------------
 
@@ -339,26 +413,47 @@ export class AgentPayClient {
    * Refund a call within the window (payer right — the human principal, or
    * the agent itself: EscrowCore allows payer OR agent OR relayer). Funds go
    * back to the principal; the merchant's dashboard records the dispute.
+   *
+   * Safe retry: a confirmed-but-reverted tx provably moved no money (the
+   * escrow stays Open), and refundCall is idempotent (re-refund reverts
+   * NOT_OPEN) — so a stale-replica revert can be retried blindly, exactly
+   * like payForCall.
    */
   async refund(callId: bigint): Promise<{ txHash: string; explorerUrl: string }> {
     if (!this.signer) throw new AgentPayError("RPC_ERROR", "refund needs a signer");
     try {
-      const tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).refundCall(callId);
-      const rec = await tx.wait();
-      if (!rec || rec.status !== 1) throw new AgentPayError("TX_FAILED", `refundCall tx reverted (${tx.hash})`);
+      let tx: ethers.ContractTransactionResponse = await (this.payEndpoint.connect(this.signer) as ethers.Contract).refundCall(callId, await withGasHeadroom((this.payEndpoint.connect(this.signer) as ethers.Contract).refundCall.estimateGas(callId).catch(() => Promise.resolve(300_000n)), 300_000n));
+      let rec: ethers.ContractTransactionReceipt | null = await tx.wait().catch(() => null);
+      for (let attempt = 0; (!rec || rec.status !== 1) && attempt < 3; attempt++) {
+        // QIE load-balanced replicas can execute a rapid follow-up against a
+        // stale view and revert empty. One block + safe resend clears it.
+        await new Promise((r) => setTimeout(r, 2500));
+        tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).refundCall(callId, await withGasHeadroom((this.payEndpoint.connect(this.signer) as ethers.Contract).refundCall.estimateGas(callId).catch(() => Promise.resolve(300_000n)), 300_000n));
+        rec = await tx.wait().catch(() => null);
+      }
+      if (!rec || rec.status !== 1) {
+        throw new AgentPayError("TX_FAILED", `refundCall tx reverted (${tx.hash})`, { txHash: tx.hash });
+      }
       return { txHash: rec.hash, explorerUrl: `${this.network.explorer}/tx/${rec.hash}` };
     } catch (e) {
       throw toAgentPayError(e, `refund(callId=${callId})`);
     }
   }
 
-  /** Merchant claims settlement after the window (permissionless keeper variant: settleExpired). */
+  /** Merchant claims settlement after the window (permissionless keeper variant: settleExpired). Safe-retry like refund(). */
   async claim(callId: bigint): Promise<{ txHash: string; explorerUrl: string }> {
     if (!this.signer) throw new AgentPayError("RPC_ERROR", "claim needs a signer");
     try {
-      const tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).claimCall(callId);
-      const rec = await tx.wait();
-      if (!rec || rec.status !== 1) throw new AgentPayError("TX_FAILED", `claimCall tx reverted (${tx.hash})`);
+      let tx: ethers.ContractTransactionResponse = await (this.payEndpoint.connect(this.signer) as ethers.Contract).claimCall(callId, await withGasHeadroom((this.payEndpoint.connect(this.signer) as ethers.Contract).claimCall.estimateGas(callId).catch(() => Promise.resolve(300_000n)), 300_000n));
+      let rec: ethers.ContractTransactionReceipt | null = await tx.wait().catch(() => null);
+      for (let attempt = 0; (!rec || rec.status !== 1) && attempt < 3; attempt++) {
+        await new Promise((r) => setTimeout(r, 2500));
+        tx = await (this.payEndpoint.connect(this.signer) as ethers.Contract).claimCall(callId, await withGasHeadroom((this.payEndpoint.connect(this.signer) as ethers.Contract).claimCall.estimateGas(callId).catch(() => Promise.resolve(300_000n)), 300_000n));
+        rec = await tx.wait().catch(() => null);
+      }
+      if (!rec || rec.status !== 1) {
+        throw new AgentPayError("TX_FAILED", `claimCall tx reverted (${tx.hash})`, { txHash: tx.hash });
+      }
       return { txHash: rec.hash, explorerUrl: `${this.network.explorer}/tx/${rec.hash}` };
     } catch (e) {
       throw toAgentPayError(e, `claim(callId=${callId})`);

@@ -15,6 +15,14 @@ export type AgentPayErrorCode =
   | "ALREADY_SETTLED" // 409 — call already refunded/claimed
   | "REFUND_WINDOW_CLOSED" // 403 — dispute window elapsed
   | "HTTP_ERROR" // any other non-2xx
+  // P4 — real-world goods (tickets)
+  | "SOLD_OUT" // 409 — inventory exhausted, escrow refundable
+  | "TICKET_NOT_FOUND" // 404 on ticket endpoints
+  | "TICKET_INVALID_SECRET" // 403 — presented secret does not match the mint
+  | "TICKET_ALREADY_REDEEMED" // 409 — single-use violation at the gate
+  | "TICKET_VOID" // 409 — ticket was voided by an escrow refund
+  | "TICKET_ALREADY_REDEEMED_REFUND" // 409 — refund denied: goods consumed
+  | "INVALID_REFUND_PROOF" // 402 — refund tx failed on-chain verification
   // on-chain rail (contract custom errors)
   | "AGENT_NOT_ELIGIBLE" // AgentRegistry: not registered/active/bound
   | "NOT_MANDATE_AGENT" // mandate belongs to another agent
@@ -94,4 +102,36 @@ export function toAgentPayError(e: unknown, context?: string): AgentPayError {
     }
   }
   return new AgentPayError("RPC_ERROR", `${context ? context + ": " : ""}${raw}`, { raw });
+}
+
+/**
+ * P4: map a seller HTTP failure (status + JSON body) onto the typed surface,
+ * so agent code branches on `e.code` for sold-out tickets, replayed
+ * redemption secrets and denied refunds instead of parsing strings.
+ */
+export function httpErrorToAgentPayError(
+  status: number,
+  body: Record<string, unknown>,
+  context: string
+): AgentPayError {
+  const err = String((body as { error?: string }).error || "");
+  if (status === 409 && err === "sold_out")
+    return new AgentPayError("SOLD_OUT", `${context}: sold out — escrow refundable on-chain`, body);
+  if (status === 404 && err === "ticket_not_found")
+    return new AgentPayError("TICKET_NOT_FOUND", `${context}: ticket does not exist`, body);
+  if (status === 403 && err === "invalid_secret")
+    return new AgentPayError("TICKET_INVALID_SECRET", `${context}: presented secret does not match the mint`, body);
+  if (status === 409 && err === "already_redeemed")
+    return new AgentPayError("TICKET_ALREADY_REDEEMED", `${context}: single-use ticket already scanned`, body);
+  if (status === 409 && err === "ticket_void")
+    return new AgentPayError("TICKET_VOID", `${context}: ticket was voided by an escrow refund`, body);
+  if (status === 409 && err === "ticket_already_redeemed")
+    return new AgentPayError("TICKET_ALREADY_REDEEMED_REFUND", `${context}: refund denied — goods consumed`, body);
+  if (status === 402 && err === "invalid_refund_proof")
+    return new AgentPayError("INVALID_REFUND_PROOF", `${context}: refund tx failed on-chain verification`, body);
+  if (status === 402)
+    return new AgentPayError("INVALID_PAYMENT", `${context}: seller rejected the payment`, body);
+  if (status === 404)
+    return new AgentPayError("PRODUCT_NOT_FOUND", `${context}: not found`, body);
+  return new AgentPayError("HTTP_ERROR", `${context}: ${status}`, body);
 }

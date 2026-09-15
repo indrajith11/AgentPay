@@ -1,5 +1,7 @@
 {
   "principal": "0xaa7D0e7Cb165eE5BAd27f7244b526EFfd3aa1358",
   "agent": "0x78aEeA04Bd2Cb8e65fF3193f35e0cbc2988DB110",
-  "providerAcct": "0xE4392C1fc8765736D92FBD2D5CB9471FbcA94F8D"
+  "providerAcct": "0xE4392C1fc8765736D92FBD2D5CB9471FbcA94F8D",
+  "p4Agent": "0x4999B77637c6B3Cdba6032A145005b83043B551e",
+  "_p4": "P4 ticket E2E: agent 0x4999…551e (registered 'p4-ticket-agent', principal = deployer 0xe91d…dBc), mandate 10 (perCall 0.15 / daily 0.4 WQIE, PayEndpoint authorized), products: 2 = General Admission $0.10, 3 = VIP Backstage $0.10. Agent key lives ONLY in gitignored addresses/p4_roles_local.json"
 }

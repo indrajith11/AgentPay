@@ -55,7 +55,7 @@ cap and you get a typed `AgentPayError` (`PER_CALL_CAP`, `DAILY_CAP`,
 `MANDATE_BALANCE`, …) — pre-flighted so no gas is burned. Full guide:
 [`agentpay/agent/sdk/README.md`](agentpay/agent/sdk/README.md).
 
-**Three reference agents run end-to-end on testnet 1983**
+**Four reference agents run end-to-end on testnet 1983**
 (`agentpay/agent/examples/`, driven with `bun`):
 
 | agent | what it proves (2026-09-15 trace) |
@@ -63,11 +63,53 @@ cap and you get a typed `AgentPayError` (`PER_CALL_CAP`, `DAILY_CAP`,
 | `shopping-agent.ts` | agent buys goods at a QR store — pays the exact EIP-681 amount, matcher auto-books PAID in 8.3 s |
 | `data-buyer-agent.ts` | full x402: 402 terms → `payForCall` (callId/escrow on-chain) → seller verifies tx LIVE → self-verify → **replayed tx hash rejected** → principal refund mined |
 | `ticket-buyer-agent.ts` | mandate controls: buys tickets until the daily cap blocks ticket #3 as a typed `DAILY_CAP` — zero gas wasted, nothing bypassed |
+| `ticket-agent.ts` | **real-world goods**: buys an event ticket, redeems it at the gate, and a replayed secret is rejected — the ticket cannot be double-spent |
 
 ```bash
 cd agentpay/agent
 AGENT_PRIVATE_KEY=0x… MANDATE_ID=2 bun examples/data-buyer-agent.ts
 ```
+
+## Real-world goods: tickets on the machine rail (P4)
+
+x402 agents buy data. AgentPay agents buy **real things**. Products with
+`kind: "ticket"` are scarce, redeemable goods on the same on-chain rail —
+the payment is still `payForCall` → escrow → refund window, but the payload
+the agent receives is an **HMAC-signed bearer ticket** bound to the on-chain
+callId:
+
+```
+agent.buyTicket(url, "event-ticket", { mandateId })   →  ticket { id, secret }
+agent.redeemTicket(url, ticketId, secret)             →  admission GRANTED at the gate
+agent.redeemTicket(url, ticketId, secret)  again      →  409 TICKET_ALREADY_REDEEMED
+agent.ticketStatus(url, ticketId)                     →  VALID / REDEEMED / VOID (auditable)
+```
+
+The trust properties that make this commerce, not a demo:
+
+- **Scarcity is public** — the 402 terms carry `inventoryLeft`; a sold-out
+  product answers `409 sold_out` BEFORE touching the payment, so the agent's
+  escrowed money stays fully recoverable via `refundCall`.
+- **Single-use redemption** — the gate verifies the HMAC secret in constant
+  time; a screenshot of a ticket cannot be reused by anyone.
+- **Refund ↔ redemption are mutually exclusive** — refunding the escrow voids
+  unredeemed tickets and restocks inventory (the seller verifies the on-chain
+  `CallRefunded` log before recording it); a REDEEMED ticket blocks the
+  refund leg — no eat-cake-and-have-it.
+
+**25/25 assertions PASS on testnet 1983** (2026-09-15, mandate 10, `scripts/e2e_p4_tickets.mjs`):
+
+| step | on-chain trace |
+|------|----------------|
+| buy GA ticket → seller verified `CallPaid(product 2)` | `0xb01a68f6…5aa4` |
+| redeem at gate → GRANTED 13:56:55Z; replay → typed `TICKET_ALREADY_REDEEMED` | ticket `tkt_00001_4abf104a` |
+| buy GA #2 → principal `refundCall` → seller voids ticket + restocks | `0x5bc50011…e549` / `0xfc1cdf17…5db2` |
+| buy VIP (stock 1 → 0) | `0x41eb51b1…2878` |
+| sold-out attempt with a fresh real payment → `409 SOLD_OUT`, tx not consumed → escrow recovered | `0x4d087304…6778` / `0x87a802e3…7d7cc` |
+| ticket #3 for GA → typed `DAILY_CAP` pre-flight, zero gas | mandate 10 drained exactly 0.4/0.4 WQIE |
+
+Tickets work in demo mode too (dashboard path unchanged): a signed-intent
+purchase mints the same bearer ticket without an on-chain tx.
 
 ## Architecture
 
@@ -132,9 +174,9 @@ prisma/                  schema (merchants, sessions, nonces, passkeys, settings
 agentpay/contracts/      11 Solidity contracts + deploy/e2e scripts + 45-case test suite
 agentpay/indexer/        viem event poller → idempotent SQLite ledger
 agentpay/agent/sdk/      @agentpay/sdk — typed agent client (discover/pay/verify/refund, X-05)
-agentpay/agent/examples/ 3 reference agents: shopping, data-buyer, ticket-buyer (X-06)
+agentpay/agent/examples/ 4 reference agents: shopping, data-buyer, ticket-buyer, ticket (X-06)
 agentpay/docs/           whitepaper, deploy guide, demo script
-mini-services/           standalone x402 endpoint service (single-use callId replay guard)
+mini-services/           standalone x402 endpoint service (single-use callId + ticket redemption rail)
 ```
 
 ## Hackathon

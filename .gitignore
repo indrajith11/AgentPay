@@ -65,3 +65,4 @@ coverage/
 # ---- sandbox-local tooling (not part of the product repo) ----
 /scripts/git_ssh_paramiko.py
 /scripts/gen_ssh_key.py
+agentpay/contracts/addresses/p4_roles_local.json

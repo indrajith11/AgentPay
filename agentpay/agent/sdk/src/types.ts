@@ -17,6 +17,20 @@ export type ProductInfo = {
   merchantId: string;
   /** JSON-ish schema of the payload the buyer receives. */
   schema: string;
+  /** P4: "data" payloads vs "ticket" real-world goods. */
+  kind?: "data" | "ticket";
+  /** P4: ticket products show remaining supply (scarcity is public). */
+  inventoryLeft?: number | null;
+  /** P4: event metadata for ticket products. */
+  event?: TicketEvent;
+};
+
+/** P4: the real-world event a ticket admits to. */
+export type TicketEvent = {
+  name: string;
+  venue: string;
+  startsAt: string;
+  gate: string;
 };
 
 /** GET /v1/products — the seller's full catalog. */
@@ -42,6 +56,11 @@ export type Terms = {
   description: string;
   responseSchema: string;
   howToPay: string;
+  /** P4: ticket products carry scarcity + redemption info in the terms. */
+  kind?: "data" | "ticket";
+  inventoryLeft?: number | null;
+  event?: TicketEvent;
+  redeem?: string;
 };
 
 /** Quote for one call, fetched on-chain (no trust in the seller's math). */
@@ -77,6 +96,50 @@ export type PurchaseResult = {
   paid: string;
   data: unknown;
   onChain?: CallReceipt | null;
+  /** P4: present on ticket products. */
+  kind?: "data" | "ticket";
+  inventoryLeft?: number | null;
+};
+
+/** P4: the minted, redeemable good inside a ticket purchase payload. */
+export type TicketPayload = {
+  ticketId: string;
+  /** One-time redeem proof (HMAC) — the buyer's possession of this IS the ticket. */
+  secret: string;
+  event?: TicketEvent;
+  escrowRef?: string;
+  redeemHow?: string;
+  note?: string;
+};
+
+/** P4: the gate's response to a successful redemption. */
+export type RedemptionProof = {
+  ok: true;
+  admission: "GRANTED";
+  ticketId: string;
+  event?: TicketEvent;
+  gate: string;
+  redeemedAt: string;
+  boundCall: string;
+  onChainCallId: string | null;
+  escrowRef: string;
+};
+
+/** P4: ticket state without exposing the secret (venue/agent check). */
+export type TicketStatusResult = {
+  ticketId: string;
+  productKey: string;
+  callId: string;
+  status: "VALID" | "REDEEMED" | "VOID";
+  event?: TicketEvent;
+  escrowRef: string;
+  issuedAt: string;
+  redeemedAt: string | null;
+};
+
+/** P4: buyTicket() result — purchase receipt + the typed ticket. */
+export type TicketPurchase = PurchaseResult & {
+  ticket: TicketPayload;
 };
 
 /** Client-side verification of any PayEndpoint transaction. */
