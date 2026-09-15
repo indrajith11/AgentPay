@@ -1,0 +1,15 @@
+{
+  "name": "agentpay-indexer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "P0 event indexer: chain events -> idempotent SQLite ledger -> health API (AgentPay x MerchantPilot)",
+  "scripts": {
+    "start": "tsx index.ts",
+    "backfill": "tsx index.ts --backfill"
+  },
+  "dependencies": {
+    "viem": "^2.21.0",
+    "tsx": "^4.19.0"
+  }
+}

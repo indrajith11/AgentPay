@@ -1,0 +1,12 @@
+{
+  "name": "agentpay-endpoint",
+  "version": "1.0.0",
+  "description": "x402-style machine-payable HTTP endpoint service for AgentPay (QIE)",
+  "scripts": {
+    "dev": "bun --hot index.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "hono": "^4.6.0"
+  }
+}

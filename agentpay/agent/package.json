@@ -1,0 +1,19 @@
+{
+  "name": "agentpay-agent",
+  "version": "1.0.0",
+  "description": "AgentPay autonomous agent daemon: reconciliation, collections, treasury + machine purchases",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

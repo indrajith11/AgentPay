@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Merchant {
+  id         String        @id @default(cuid())
+  name       String
+  owner      String // wallet address
+  phone      String? // WhatsApp/SMS target for agent reports
+  category   String        @default("retail")
+  currency   String        @default("ZAR")
+  qiePassId  String?
+  chainAddr  String? // on-chain MerchantRegistry address when live
+  active     Boolean       @default(true)
+  createdAt  DateTime      @default(now())
+  invoices   Invoice[]
+  subs       Subscription[]
+  endpoints  MachineEndpoint[]
+  ledger     LedgerEntry[]
+  qrSales    QrSale[]
+  events     AgentEvent[]
+}
+
+model Invoice {
+  id            String    @id @default(cuid())
+  merchantId    String
+  merchant      Merchant  @relation(fields: [merchantId], references: [id])
+  customerName  String
+  customerPhone String?
+  amountCents   Int
+  paidCents     Int       @default(0)
+  currency      String    @default("ZAR")
+  status        String    @default("SENT") // SENT | PARTIAL | PAID | OVERDUE
+  dueDate       DateTime
+  paidAt        DateTime?
+  chainRef      String?
+  notes         String?
+  createdAt     DateTime  @default(now())
+}
+
+model Subscription {
+  id            String    @id @default(cuid())
+  merchantId    String
+  merchant      Merchant  @relation(fields: [merchantId], references: [id])
+  customerName  String
+  planName      String
+  amountCents   Int
+  currency      String    @default("ZAR")
+  interval      String    @default("MONTHLY") // WEEKLY | MONTHLY
+  status        String    @default("ACTIVE") // ACTIVE | CANCELLED | LAPSED
+  nextChargeAt  DateTime
+  chargesCount  Int       @default(0)
+  chainRef      String?
+  createdAt     DateTime  @default(now())
+}
+
+model MachineEndpoint {
+  id          String   @id @default(cuid())
+  merchantId  String
+  merchant    Merchant @relation(fields: [merchantId], references: [id])
+  productKey  String   @unique // e.g. weather-basic
+  name        String
+  description String
+  priceCents  Int
+  currency    String   @default("ZAR")
+  callsCount  Int      @default(0)
+  revenueCents Int     @default(0)
+  active      Boolean  @default(true)
+  chainRef    String? // on-chain productId
+  createdAt   DateTime @default(now())
+  calls       EndpointCall[]
+}
+
+model EndpointCall {
+  id          String         @id @default(cuid())
+  endpointId  String
+  endpoint    MachineEndpoint @relation(fields: [endpointId], references: [id])
+  agentName   String
+  agentWallet String?
+  amountCents Int
+  status      String         @default("SETTLED") // SETTLED | REFUNDED
+  escrowRef   String? // on-chain escrowId (refund window)
+  createdAt   DateTime       @default(now())
+}
+
+model QrSale {
+  id               String    @id @default(cuid())
+  merchantId       String
+  merchant         Merchant  @relation(fields: [merchantId], references: [id])
+  refId            String    @unique
+  payee            String
+  amountWei        String
+  qieAmount        String
+  usdCents         Int?
+  status           String    @default("WAITING") // WAITING | PAID | EXPIRED
+  txHash           String?
+  blockNumber      Int?
+  explorerUrl      String?
+  scanFromBlock    Int       @default(0)
+  lastScannedBlock Int       @default(0)
+  createdAt        DateTime  @default(now())
+  expiresAt        DateTime
+  detectedAt       DateTime?
+
+  @@index([merchantId, status])
+}
+
+model LedgerEntry {
+  id          String   @id @default(cuid())
+  merchantId  String
+  merchant    Merchant @relation(fields: [merchantId], references: [id])
+  date        DateTime
+  kind        String // SALE | FEE | PAYOUT | TREASURY
+  label       String
+  amountCents Int
+  currency    String   @default("ZAR")
+  txRef       String?
+  createdAt   DateTime @default(now())
+}
+
+model AgentEvent {
+  id         String   @id @default(cuid())
+  merchantId String
+  merchant   Merchant @relation(fields: [merchantId], references: [id])
+  kind       String // RECONCILIATION | COLLECTION | TREASURY | MACHINE_SALE | CREDIT
+  title      String
+  detail     String
+  amountCents Int?
+  createdAt  DateTime @default(now())
+}
+
+model CreditPassport {
+  id           String   @id @default(cuid())
+  wallet       String   @unique
+  subjectName  String
+  score        Int      @default(300)
+  onTimeCount  Int      @default(0)
+  volumeCents  Int      @default(0)
+  defaults     Int      @default(0)
+  currency     String   @default("ZAR")
+  updatedAt    DateTime @updatedAt
+  createdAt    DateTime @default(now())
+}
+
+model Setting {
+  key   String @id
+  value String
+}

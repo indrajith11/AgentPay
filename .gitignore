@@ -1,0 +1,67 @@
+# ---- dependencies ----
+node_modules/
+.pnp
+.pnp.*
+
+# ---- next.js build ----
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# ---- secrets (NEVER commit) ----
+.env
+.env.*
+!.env.example
+agentpay/contracts/addresses/faucet_funder*.json
+
+# ---- local databases ----
+db/custom.db
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# ---- contract build artifacts (regenerate with: npx hardhat compile) ----
+agentpay/contracts/cache/
+agentpay/contracts/artifacts/
+agentpay/contracts/typechain-types/
+
+# ---- workspace internals (not part of the product repo) ----
+/.zscripts/
+/tool-results/
+/research/
+/download/
+/examples/
+/tests/
+/worklog.md
+/dev.log
+*.log
+
+# ---- internal planning scripts (hackathon strategy, not product) ----
+scripts/build_report*.py
+scripts/build_census_xlsx.py
+scripts/plan_*.py
+scripts/report_content*.py
+scripts/charts_*.py
+scripts/merge_*.py
+scripts/research_*.sh
+scripts/audit_doc/
+scripts/shoot_diagram*.js
+scripts/digest_searches.py
+scripts/aggregate_census.py
+
+# ---- misc ----
+.DS_Store
+.vercel
+coverage/
+.claude
+.z-ai-config
+
+# ---- platform internals (not product) ----
+/skills/
+
+# ---- sandbox-local tooling (not part of the product repo) ----
+/scripts/git_ssh_paramiko.py
+/scripts/gen_ssh_key.py

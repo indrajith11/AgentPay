@@ -1,0 +1,56 @@
+{
+  "network": "qieTestnet",
+  "chainId": 1983,
+  "startedAt": "2026-09-15T07:16:21.642Z",
+  "steps": {
+    "createInvoice": "0xc29e453f0c47fadf96bea1e79776435d96bc2a2411235c33dc6d498c34501c57",
+    "approveInvoiceVault": "0x2f2522b27ef9d0c40a932d96fb20131cf7bc9de7b453b5e0abfbbdcd2c9ce7a7",
+    "payInvoice": "0x1b244af0a14561c430654fc1e13e8233daae7dadca70d70da7f5f39d74f3233a",
+    "setPayoutProfile": "0x54abc0ecea1d2132288fcb747916218ed3aca2280498a501547f4c0f57c812e4",
+    "claimCall": "0xe0a6bf38ad93fa100b0e395f563acd16f626aff3c4408398eccebddc9c38f5f5",
+    "executeAutoWithdraw": "0xf42456db4b9fa03813f0cab78970337d9b8eb8093d2dfd0d726909fa6895eb98"
+  },
+  "finishedAt": "2026-09-15T07:18:05.859Z",
+  "finalState": {
+    "merchantWQIE": "0.556455555555555555",
+    "offrampDepositWQIE": "0.2991",
+    "mandateBalance": "0.644444444444444445",
+    "routerWithdrawable": "0.0",
+    "externalEarnings": "0.552777777777777778",
+    "roles": {
+      "principal": "0xaa7D0e7Cb165eE5BAd27f7244b526EFfd3aa1358",
+      "agent": "0x78aEeA04Bd2Cb8e65fF3193f35e0cbc2988DB110",
+      "providerAcct": "0xE4392C1fc8765736D92FBD2D5CB9471FbcA94F8D"
+    }
+  },
+  "deployedContracts": {
+    "network": "qieTestnet",
+    "chainId": 1983,
+    "deployedAt": "2026-09-15",
+    "deployer": "0xe91d9ddad8B1d13038aBe8A91F2573bF92583dBc",
+    "WQIE": "0x5e165E6c7AC4039aEDc2a5505Ae35cb20764916c",
+    "MockAggregator": "0x71206B14F6B005E70909F83048CcE8002F03EF70",
+    "MerchantRegistry": "0x7918e72d7725E87D3C09bB80873991a05BaEc9aA",
+    "AgentRegistry": "0x715f9449145C2FC74c74556154F17C522a30ED09",
+    "EscrowCore": "0x7566803615CB5d9Ac15f24269C3305a2738C995b",
+    "SettlementRouter": "0x1713B2fb74A3b57f55088f21743668a8Bb261523",
+    "CreditPassport": "0xCaecF75Eebb659148DE2d2a4a28131dF428B5cA8",
+    "MandateVault": "0x2FEf89522b8B0a55161ed11a7CB19B57C6fF2169",
+    "PayEndpoint": "0x4ccdE1dD4d2c3F39dB9D2b350516070257dfb647",
+    "InvoiceVault": "0xD0FF272B69FA884fd2C323ce334dC77F9243Ac0C",
+    "RecurringMandate": "0x0AaC5b7c0E669D3Ecae635d6820858D4ab897D8f",
+    "wiring": {
+      "escrowRelayer": "PayEndpoint",
+      "settlementRecorders": [
+        "PayEndpoint",
+        "InvoiceVault",
+        "RecurringMandate"
+      ],
+      "payEndpointUsdFeed": {
+        "token": "WQIE",
+        "feed": "MockAggregator ($0.18 stand-in, mainnet = official QIE/USD 0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17)"
+      },
+      "settlementTokenDefault": "WQIE"
+    }
+  }
+}

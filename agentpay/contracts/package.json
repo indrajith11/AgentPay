@@ -1,0 +1,24 @@
+{
+  "name": "agentpay-contracts",
+  "version": "1.0.0",
+  "description": "AgentPay x MerchantPilot - machine-payable commerce + merchant ops on QIE",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network qieTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network qieMainnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.17",
+    "typescript": "^5.6.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^22.0.0",
+    "chai": "^4.3.7",
+    "@types/chai": "^4.3.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
