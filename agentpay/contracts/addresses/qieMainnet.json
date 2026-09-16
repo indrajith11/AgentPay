@@ -1,0 +1,117 @@
+{
+  "network": "qieMainnet",
+  "deployedAt": "2026-09-16T11:48:48.747Z",
+  "deployer": "0x33E00d801943D945DC5Ec92A2192425427023586",
+  "MerchantRegistry": "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+  "AgentRegistry": "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+  "EscrowCore": "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+  "SettlementRouter": "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+  "CreditPassport": "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E",
+  "MandateVault": "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+  "PayEndpoint": "0xb35b5693ea5c12dB23875032227A84C713bc9B5E",
+  "InvoiceVault": "0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D",
+  "RecurringMandate": "0x9c75059E6C48F0550990499F1068f878a65C047B",
+  "WQIE": "0x883E3098eF144f91818037936a722b8bd448074b",
+  "settlementToken": "0x883E3098eF144f91818037936a722b8bd448074b",
+  "qieUsdOracle": "0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17",
+  "usdFeedToken": "0x883E3098eF144f91818037936a722b8bd448074b",
+  "usdFeedAddress": "0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17",
+  "deployments": [
+    {
+      "name": "WQIE",
+      "address": "0x883E3098eF144f91818037936a722b8bd448074b",
+      "args": [],
+      "txHash": "0x24ac0b9b93fe0430f2c647d6df9267ceed66b9993f54b02ea13916007c112ac1",
+      "gasUsed": "712790"
+    },
+    {
+      "name": "MerchantRegistry",
+      "address": "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+      "args": [
+        "0x33E00d801943D945DC5Ec92A2192425427023586"
+      ],
+      "txHash": "0x22af2e34a168fceee8a125dfc107cabf62080023dfcf250ccd9d672f7c493166",
+      "gasUsed": "971812"
+    },
+    {
+      "name": "AgentRegistry",
+      "address": "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+      "args": [],
+      "txHash": "0x82c5556744dffbd37000425c7e1a2ee346c7e4878c4fb0ff679cfaa08c787785",
+      "gasUsed": "824455"
+    },
+    {
+      "name": "EscrowCore",
+      "address": "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+      "args": [
+        600
+      ],
+      "txHash": "0x17d860b5d282918f0ce00ee09a1fffc0cae8b16fbd6633ed73d0d051c76470b0",
+      "gasUsed": "1005651"
+    },
+    {
+      "name": "SettlementRouter",
+      "address": "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+      "args": [
+        "0x33E00d801943D945DC5Ec92A2192425427023586",
+        "0x33E00d801943D945DC5Ec92A2192425427023586"
+      ],
+      "txHash": "0x6baab6cc058063e2db1e2c81e00ea36aea0dced0f4c8eec1363f9ea0042e96b0",
+      "gasUsed": "1739476"
+    },
+    {
+      "name": "CreditPassport",
+      "address": "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E",
+      "args": [
+        "0x33E00d801943D945DC5Ec92A2192425427023586"
+      ],
+      "txHash": "0x7cab2eaf0f8890e282cc7537e3e8ef372e92ddc318b4904f4fa3ccf12c100d55",
+      "gasUsed": "710399"
+    },
+    {
+      "name": "MandateVault",
+      "address": "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+      "args": [
+        "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20"
+      ],
+      "txHash": "0xd57f3c9993291090b121270abb2ec10dac2d948587cccc653afda58e0a8a8453",
+      "gasUsed": "1052193"
+    },
+    {
+      "name": "PayEndpoint",
+      "address": "0xb35b5693ea5c12dB23875032227A84C713bc9B5E",
+      "args": [
+        "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+        "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+        "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+        "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+        "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+        "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+      ],
+      "txHash": "0x2e1d2524f54002fc1c139cb65d25af300b6584e7827024819ba8d42a180b8527",
+      "gasUsed": "2523339"
+    },
+    {
+      "name": "InvoiceVault",
+      "address": "0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D",
+      "args": [
+        "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+        "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+        "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+      ],
+      "txHash": "0xa597868827c828ba36bc9b74bdd375083a9244b2a024e9218697525a0e28f6f0",
+      "gasUsed": "1303182"
+    },
+    {
+      "name": "RecurringMandate",
+      "address": "0x9c75059E6C48F0550990499F1068f878a65C047B",
+      "args": [
+        "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+        "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+        "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+      ],
+      "txHash": "0xd93877d022de286eaf4b3151b9a038d95a1daf78f2502d63b52f44c4f48d2685",
+      "gasUsed": "1440813"
+    }
+  ]
+}

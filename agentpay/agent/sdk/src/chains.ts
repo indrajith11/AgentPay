@@ -38,7 +38,18 @@ export const NETWORKS: Record<string, NetworkConfig> = {
       "https://rpc2mainnet.qie.digital/",
     ],
     explorer: "https://mainnet.qie.digital",
-    contracts: {}, // filled at P6 mainnet deploy — API unchanged
+    contracts: {
+      WQIE: "0x883E3098eF144f91818037936a722b8bd448074b",
+      PayEndpoint: "0xb35b5693ea5c12dB23875032227A84C713bc9B5E",
+      EscrowCore: "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+      MandateVault: "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+      AgentRegistry: "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+      MerchantRegistry: "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+      InvoiceVault: "0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D",
+      RecurringMandate: "0x9c75059E6C48F0550990499F1068f878a65C047B",
+      SettlementRouter: "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+      CreditPassport: "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E",
+    },
   },
 };
 

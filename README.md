@@ -12,6 +12,25 @@ No passwords, no email, no seed phrases: **your wallet is your account** (SIWE, 
 
 ---
 
+## LIVE ON QIE MAINNET (chain 1990) — deployed Sep 16, 2026
+
+Ten contracts deployed, wired and **source-verified on the explorer** (`agentpay/contracts/addresses/qieMainnet.json`). Smoke test: **26/26 PASS**. USD quoting uses the **official QIE Oracle QIE/USD feed** (`0x3Bc617cF…03D17`) — no mocks on mainnet.
+
+| Contract | Mainnet address | |
+|---|---|---|
+| WQIE | `0x883E3098eF144f91818037936a722b8bd448074b` | [verified](https://mainnet.qie.digital/address/0x883E3098eF144f91818037936a722b8bd448074b) |
+| MerchantRegistry | `0x0049BA098899713C0c24C2214252e4b71D9dC7b2` | [verified](https://mainnet.qie.digital/address/0x0049BA098899713C0c24C2214252e4b71D9dC7b2) |
+| AgentRegistry | `0xB129871e87c3E3B53cFd50f31290fDA9343D4F20` | [verified](https://mainnet.qie.digital/address/0xB129871e87c3E3B53cFd50f31290fDA9343D4F20) |
+| EscrowCore | `0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a` | [verified](https://mainnet.qie.digital/address/0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a) |
+| SettlementRouter | `0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076` | [verified](https://mainnet.qie.digital/address/0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076) |
+| CreditPassport | `0x837E6dCE04671d58703f7030906F6fCd32D6aA2E` | [verified](https://mainnet.qie.digital/address/0x837E6dCE04671d58703f7030906F6fCd32D6aA2E) |
+| MandateVault | `0x4f1bb87B31648c9D265CbF743AeB107aA83E8906` | [verified](https://mainnet.qie.digital/address/0x4f1bb87B31648c9D265CbF743AeB107aA83E8906) |
+| PayEndpoint | `0xb35b5693ea5c12dB23875032227A84C713bc9B5E` | [verified](https://mainnet.qie.digital/address/0xb35b5693ea5c12dB23875032227A84C713bc9B5E) |
+| InvoiceVault | `0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D` | [verified](https://mainnet.qie.digital/address/0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D) |
+| RecurringMandate | `0x9c75059E6C48F0550990499F1068f878a65C047B` | [verified](https://mainnet.qie.digital/address/0x9c75059E6C48F0550990499F1068f878a65C047B) |
+
+Deployer: `0x33E00d801943D945DC5Ec92A2192425427023586`. Escrow relayer, SettlementRouter/CreditPassport recorder roles wired on-chain during deploy.
+
 ## Live on QIE testnet (chain 1983)
 
 Eleven contracts deployed and wired (`agentpay/contracts/addresses/qieTestnet.json`):
