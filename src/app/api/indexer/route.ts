@@ -36,7 +36,7 @@ export async function GET() {
     out.heartbeatAgeSeconds = hj.heartbeatAgeSeconds;
     // indexer head = the higher of (last event block) and (furthest watcher
     // checkpoint) — events are sparse, so the checkpoint is the live position
-    const ckptMax = Math.max(0, ...Object.values(hj.checkpoints || {}).map((c: { lastBlock?: number }) => Number(c?.lastBlock) || 0));
+    const ckptMax = Math.max(0, ...(Object.values(hj.checkpoints ?? {}) as Array<{ lastBlock?: number }>).map((c) => Number(c?.lastBlock) || 0));
     out.ledgerHead = Math.max(Number(hj.ledgerHead) || 0, ckptMax);
     out.eventCounts = hj.eventCounts || {};
     out.events = (ej.events || []).map((ev: Record<string, unknown>) => ({

@@ -135,6 +135,39 @@ pipeline now ships in-repo:
 - Full deploy rehearsal passes on an in-memory network; the mainnet deploy is
   a single funded command (`npx hardhat run scripts/deploy.ts --network qieMainnet`).
 
+## Public network stats (P5) — live on-chain transparency
+
+Anyone can audit AgentPay's real activity without trusting our claims: the public
+**`/network`** page (and `GET /api/network-stats`) reconciles raw event logs directly
+from QIE RPC — no database of record, no cached demo numbers.
+
+**What it counts (live, from chain):** merchants registered/verified
+(MerchantRegistry), agents registered + principals bound (AgentRegistry),
+machine-pay calls paid, gross volume in QIE, protocol fees, unique agents,
+settled vs refunded splits and the latest call tx (PayEndpoint), escrow
+opened/released/refunded (EscrowCore), invoices created/fully paid
+(InvoiceVault), payout profiles saved (SettlementRouter).
+
+**Engineering notes (why this was non-trivial):**
+
+- QIE RPC caps `getLogs` at 10k blocks per query — the reconciler walks the
+  chain in 9.5k-block windows with rotation across 6 official RPC endpoints,
+  jittered backoff, and surfaces `skippedWindows` in the payload instead of
+  silently dropping coverage.
+- Public replica RPCs ignore `eth_getLogs` topic filters → events are
+  classified client-side by `topic0` and de-duplicated across overlapping
+  windows.
+- Event topic hashes come from the full indexed-annotated signature via
+  `Interface.getEvent().topicHash` (hand-hashed signatures with `"indexed"`
+  silently match nothing); ethers 6.17 requires the `event ` prefix on
+  signature strings.
+- Chain head + per-RPC latency shown so reviewers can judge freshness; manual
+  refresh button; verified responsive at 390px.
+
+Live testnet snapshot at time of writing: **26 calls paid · 3.5111 QIE gross ·
+3 unique agents · 5 settled / 17 refunded · escrow 26/5/17 · 0 skipped
+windows**.
+
 ## Architecture
 
 ```
