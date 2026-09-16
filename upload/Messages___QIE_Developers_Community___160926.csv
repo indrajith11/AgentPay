@@ -1,0 +1,942 @@
+﻿message_id,timestamp,text,sender_id,source_chat,scraped_at,source_mode,is_outgoing,reply_to_message_id,media_type,edited
+"4294971435","2026-09-16T11:43:27.000Z","You familiar with QUSDC for your payment solution?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971434","2026-09-16T11:41:44.000Z","Welcome","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971433","2026-09-16T11:41:41.000Z","","7617469792","QIE Developers Community","2026-09-16T12:04:25.046Z","web","true","","","false"
+"4294971426","2026-09-15T14:44:40.000Z","","6840075243","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971425","2026-09-15T14:44:38.000Z","","7121765362","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971424","2026-09-15T14:44:34.000Z","","1722153720","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971423","2026-09-14T14:51:38.000Z","QIE ID Widget: Built for dApps & Exchanges 
+
+Become a QIE ID reseller, personalise the widget for your platform, and earn by selling payment handles that make crypto payments easier for your users. 
+
+Watch the full video to see how the QIE ID Widget works. 
+
+#QIE #QIEID #payment #EVM #Bitcoin #ethereum #solana","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","document","false"
+"4294971422","2026-09-11T11:05:05.000Z","Hey builders 👋 
+
+We just shipped the reputation gate on Fluenci: Stripe-style subscriptions on QIE where merchants can gate access by Open, QIE ID, QIE Pass, or onchain reputation (pulled from QIE's Reputation API). 
+
+Connect your wallet at fluenci.xyz → Merchant tab to see your own QIE reputation score live on the dashboard - would love your feedback!","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971416","","false"
+"4294971421","2026-09-11T09:46:08.000Z","sending to team - will revert soon","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971420","2026-09-11T09:35:45.000Z","0:[""$@1"",[""0iBBs5WBkUkx5RpVyJkmG"",null]]
+1:{""error"":true,""message"":""Error while transferring QIE test token.""}","7815674931","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971419","2026-09-11T09:35:37.000Z","","8205762426","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971418","2026-09-11T09:35:14.000Z","me too","7815674931","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971415","","false"
+"4294971417","2026-09-11T07:53:10.000Z","It is working","1359014225","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971415","","false"
+"4294971416","2026-09-11T07:10:16.000Z","The last access gate is live.
+Fluenci now gates crypto subscriptions by onchain reputation, powered by Qie's Reputation API.
+Four ways to choose who can subscribe:
+Open
+QIE ID
+QIE Pass
+Reputation
+https://x.com/fluenciai/status/2098307937928184025","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","true"
+"4294971415","2026-09-09T08:47:19.000Z","Yes, I tried the official QIE faucet. Unfortunately, it returns “Token transfer error. Please try again” for my wallet address.
+
+Could you please tell me if the faucet is currently working or if there is another way to receive QIE Testnet tokens?","1985563307","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971409","","false"
+"4294971413","2026-09-09T04:29:19.000Z","","6982784989","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971411","2026-09-09T04:29:08.000Z","","851747028","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971410","2026-09-09T04:28:50.000Z","https://www.qie.digital/faucet","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","true"
+"4294971409","2026-09-09T04:28:12.000Z","You get them for free on qie website
+
+Www.qie.digital","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971407","","false"
+"4294971408","2026-09-09T04:18:17.000Z","Quick update, everyone! 🚀 
+
+QIE Hackathon 3 is running, and there’s still time to join and build your project on QIE Chain. 
+
+We’re offering incentives to promising projects that are ready to build and launch useful products on QIE Chain. 
+
+hackathon.qie.digital 
+
+Keep building. We’re with the builders. 🛠💜 
+
+#QIE #Hackathon #dapps #building #competition","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","false"
+"4294971407","2026-09-08T17:26:47.000Z","Hello. I am building NEXORA for QIE Hackathon 3.0.
+
+The official QIE Testnet faucet returns:
+“Token transfer error. Please try again.”
+
+Could someone help me get a small amount of QIE Testnet tokens for development?
+
+I only need testnet tokens. I will provide only my public wallet address.","1985563307","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971398","2026-09-06T04:36:56.000Z","Just arrived on QIE Chain? 👀
+
+Start with QIEDEX.
+
+Stake QIE.
+Create a token.
+Provide liquidity.
+Track token activity.
+
+A simple way to explore what’s happening on QIE Chain — all from one platform.
+
+🔄 Explore QIEDEX: [https://www.dex.qie.digital/#/]
+
+#QIEDEX #QIEBlockchain","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","true"
+"4294971396","2026-09-03T07:03:24.000Z","Current features of QIE Wallet: 
+
+1. Hold multiple cryptocurrencies across different chains. 
+2. Send, receive, and swap crypto directly within the wallet. 
+3. Use your QIE ID to send and receive crypto across all supported chains. 
+4. Scan and pay instantly at 3,500+ merchants across South Africa. 
+
+At the end, it’s a non-custodial wallet. 
+
+Your keys, your crypto. 
+
+youtube.com/watch?v=NN3U3J 
+
+#QIEBLOCKCHAIN #QIEWallet
+$QIE","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","true"
+"4294971395","2026-09-02T21:14:35.000Z","","5311994841","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971394","2026-09-02T21:14:29.000Z","","1068590593","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971393","2026-09-02T09:25:03.000Z","Quick DevStation update: we just shipped a more rigorous agent pipeline for QIE, including in browser contract testing, two new QIE native templates, Qie native templates terms and verified Mainnet deployments.
+
+Try it: devstation.online
+
+https://x.com/devstation_xyz/status/2095079624220827717","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","true"
+"4294971392","2026-08-28T09:52:31.000Z","Most people have never cancelled a crypto subscription; because they've never been able to read one.
+
+Fluenci fixes that. Stripe-style subscriptions, now live on Qie
+
+→ $20/month means $20
+→ a spending cap only you can raise
+→ cancel in one tap
+
+Try it → fluenci.xyz
+Docs → fluenci.xyz/docs
+
+https://x.com/fluenciai/status/2093275410041553303","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971391","2026-08-27T07:56:10.000Z","Fluenci v1 is live on Qie mainnet and settling real payment streams today. 
+
+We're now rebuilding it as v2; simpler by design, built around merchant identity, reputation, and programmable spending limits so you authorise a cap and no merchant can ever exceed it. 
+
+New stream creation is paused while we migrate the registry; existing streams keep settling normally.
+
+https://x.com/fluenciai/status/2092883305880310104","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971390","2026-08-27T06:17:56.000Z","root@vmi2082756:~# sha256sum /usr/bin/qied
+a2c30aa0abd7ffa288836545b2ea8e408408fa758fe5283f409f613d43620e66","2059798778","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971389","","false"
+"4294971389","2026-08-27T05:53:19.000Z","🚀 QIE Mainnet Upgrade — Latest Binary Released
+
+The latest QIE Mainnet V6 validator binary is now available.
+
+🔹 Download Latest Binary:
+https://github.com/qieadmin/qiev3-mainnet/releases/download/QIE-Mainnet-V6/qied
+🔹 SHA256:
+a2c30aa0abd7ffa288836545b2ea8e408408fa758fe5283f409f613d43620e66
+
+Validator Operators:
+Please download and verify the binary checksum before upgrading your validator.
+
+📦 Snapshot:
+The snapshot team will provide the latest snapshot shortly. Please wait for the official s","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971388","2026-08-26T20:38:00.000Z","I can't send you a dm","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971387","2026-08-26T20:10:10.000Z","Hi, can we send you a dm?","5167550420","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971385","","false"
+"4294971385","2026-08-26T17:53:29.000Z","What happened to Fluenci?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971384","2026-08-26T17:16:18.000Z","oh 😳","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971383","2026-08-26T17:08:40.000Z","You just replied 😉","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971382","2026-08-26T17:08:33.000Z","I sent you DM from account","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971381","2026-08-26T17:07:58.000Z","I do not see DevStation as just another developer dashboard, the goal is to make blockchain development feel less fragmented by giving developers the tools, infrastructure, and ecosystem access they need to go from an idea to a live product without constantly switching between different platforms.
+
+which infact, the idea is born on Qie blockchain and will keep building with the support from the Qie blockchain team","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971380","2026-08-26T17:05:55.000Z","I think this is something we should talk about in DMs
+
+but since you asked here, my long term vision for DevStation is to build the infrastructure layer where developers can seamlessly build, deploy, inspect, analyze and connect on Qie from one place.","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971376","","true"
+"4294971379","2026-08-26T16:54:07.000Z","okay","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971378","2026-08-26T16:46:17.000Z","You don't even have  production domain. First get it live on proper domain. Then get some traction. We here to help.","1359014225","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971375","","false"
+"4294971377","2026-08-26T16:43:37.000Z","can you give us some clarity also?","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971376","2026-08-26T16:32:00.000Z","@martins_0x What is your long term vision with devstation?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971375","2026-08-26T16:03:24.000Z","Sir as I already told you that it's currently live at this https://remit-chain.vercel.app/
+
+And we are moving it into the PWA","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971373","2026-08-26T16:02:05.000Z","You just need to get it live and get traction","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971372","2026-08-26T15:59:13.000Z","What about us sir, please give us some clarity also","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971371","","false"
+"4294971371","2026-08-26T15:56:20.000Z","You can expect follow on payment soon","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971370","2026-08-26T15:53:55.000Z","hi, thanks for the responses above. 
+
+what about DevStation? 
+
+devstation.online
+
+when do we get to receive the remaining 50%","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971365","","true"
+"4294971369","2026-08-26T15:52:34.000Z","for the smooth working of the project","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971368","2026-08-26T15:52:17.000Z","just asking for what we won","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971367","2026-08-26T15:52:08.000Z","we dont demanding any additional money","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971366","2026-08-26T15:51:55.000Z","you are judging us from just the outside the box","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971365","2026-08-26T15:48:29.000Z","lol it looks like you have no intention to scale it to be honest.  You have very little to show","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971364","2026-08-26T15:47:33.000Z","really need that remaining amount for continue building of the project","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971363","2026-08-26T15:16:49.000Z","We are completely switching this into an PWA","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971362","2026-08-26T15:16:35.000Z","Currently it's live on vercel","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971361","2026-08-26T15:15:56.000Z","your project not even live yet","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971360","2026-08-26T15:11:28.000Z","we are build but we cant run meta ads and all for marketting until we dont have some liquidity","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971359","2026-08-26T14:13:16.000Z","Basically it's an pwa","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971357","","false"
+"4294971358","2026-08-26T14:12:31.000Z","Yaa currently working on that","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971356","","false"
+"4294971357","2026-08-26T14:07:58.000Z","you dont even have a live website?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971355","","false"
+"4294971356","2026-08-26T13:59:42.000Z","exchange rate is wrong","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971355","","false"
+"4294971355","2026-08-26T13:57:20.000Z","https://remit-chain.vercel.app/","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971354","","false"
+"4294971354","2026-08-26T12:32:27.000Z","please share your website","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971353","2026-08-26T12:27:24.000Z","for cross bordering communication we need that","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971352","2026-08-26T12:26:18.000Z","yaa we know that but we need it for maintaining the liquidity on platfrom","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971351","2026-08-26T12:25:40.000Z","this is not a charity.  we support those that work","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971350","2026-08-26T12:25:28.000Z","show us a working dapp with users","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971349","2026-08-26T12:25:18.000Z","have you got traction?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971348","2026-08-26T12:23:08.000Z","what about the prevoius hackathon remaining money sir?","5953527059","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971347","2026-08-26T12:22:22.000Z","hackathon all you need to know","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971346","2026-08-26T12:22:14.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971345","","false"
+"4294971345","2026-08-26T12:22:07.000Z","https://youtu.be/TcBsNZMm214?si=TOENfQshWs3-1x-K","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971344","2026-08-26T11:45:40.000Z","whats the crtieria this time","726800283","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971343","2026-08-26T11:20:46.000Z","Builders, a reminder 
+
+QIE Hackathon 3.0 is already underway. 
+
+$17K prize pool. 5 tracks. 4 months to build, launch on QIE Mainnet and prove real traction. 
+
+If you’ve been thinking about building on QIE, this is your time. 
+
+Registration is open worldwide. hackathon.qie.digital 
+
+#QIE #hackathon #building #dapps #dev","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","false"
+"4294971342","2026-08-25T09:47:13.000Z","","1449635905","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971341","2026-08-25T09:47:07.000Z","A little more from your QUSDC. 
+
+With QIELend, you can supply your QUSDC and earn interest while staying within the QIE DeFi ecosystem. 
+
+If your QUSDC is sitting idle, maybe it’s worth taking a look. 
+
+More details: stable.qie.digital 
+QIELEND: qielend.qie.digital 
+
+#QIELend #QUSDC #DeFi #QIEBlockchain","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","true"
+"4294971339","2026-08-23T14:05:02.000Z","🚨 See something suspicious in your transaction history?
+
+QIE Wallet lets you flag an address or transaction directly from the Transactions tab.
+
+If you believe an address may be linked to a scam, phishing attempt, or other suspicious activity, you can flag it for attention.
+
+How it works:
+Transactions → Select the transaction → Flag Transaction
+
+A simple way to report suspicious on-chain activity while keeping your wallet experience more informed.
+
+#QIEWallet #QIEBlockchain #Web3Community","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","true"
+"4294971337","2026-08-22T21:41:50.000Z","","1985563307","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971336","2026-08-22T21:41:44.000Z","","6751124011","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971334","2026-08-21T19:54:56.000Z","okay","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971329","","false"
+"4294971333","2026-08-19T13:10:11.000Z","","6997979187","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971332","2026-08-19T13:10:07.000Z","","1223233682","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971331","2026-08-19T13:10:01.000Z","","6800537136","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971330","2026-08-17T06:07:27.000Z","There’s more than one way to win at QIE Hackathon 3. 
+
+Build your own product. Solve a real problem. Create something with value. 
+
+You focus on building. 
+
+QIE takes care of rewarding the builders. 
+
+Register today: hackathon.qie.digital 
+
+#QIEHackathon3 #BuildOnQIE #builder #web3 #job #coding #crypto","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","false"
+"4294971329","2026-08-16T06:24:33.000Z","You can but need to show users then and intent to scale it","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971328","2026-08-16T06:18:39.000Z","going pretty good, wanted to confirm, can one deploy an existing project on Qie blockchain or it must be built from scratch?","6088063867","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971325","","false"
+"4294971327","2026-08-15T21:34:45.000Z","","1492863505","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971326","2026-08-15T05:21:39.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971325","","false"
+"4294971325","2026-08-15T05:12:51.000Z","Which projects scaling from hackathon 2? How can we help? Share your website","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971324","2026-08-14T09:06:49.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","4294971323","","false"
+"4294971323","2026-08-14T09:06:41.000Z","https://medium.com/@QIEecosystem/qie-blockchain-developer-bible-build-connect-scale-on-qie-e381074674fc?sharedUserId=QIEecosystem","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","false"
+"4294971322","2026-08-14T09:01:57.000Z","How is your projects going?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971321","2026-08-14T09:01:19.000Z","Developers worldwide — QIE Hackathon 3 is already LIVE. 
+
+Registration is open. 
+
+Build on QIE Mainnet, launch your product, and compete across 5 categories with builders from around the world. 
+
+If you've been waiting for the right time to build in Web3, start now. 
+
+hackathon.qie.digital 
+
+#QIEHackathon3 #BuildOnQIE #Web3Community","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","false"
+"4294971320","2026-08-14T07:30:54.000Z","📢 QIE Community Check-In
+
+Have you successfully received your QIE withdrawal from BitMart within the past week?
+
+If you have, please reply below and let us know. 👇
+
+Your experience could help other QIE holders understand the current withdrawal situation.
+
+Thank you for sharing. 💜","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","","false"
+"4294971319","2026-08-14T05:57:35.000Z","Sandbox for QIE PASS doesn`t require approval: https://dev-qiepass.qie.digital/","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","false"
+"4294971318","2026-08-13T16:48:59.000Z","🚨 QIE Blockchain is powering the next generation of digital collectibles.
+
+FAIM has selected QIE Blockchain as the infrastructure for FAIM Ink, bringing blockchain-verified digital autographs and collectibles to fans, celebrities and athletes.
+
+Integration is already underway.
+
+A major step for real-world utility on QIE. 💜
+
+📰Read the full article:  https://www.cryptopolitan.com/faim-selects-qie-blockchain-to-power-its-faim-ink-digital-signing-platform/
+
+https://www.einpresswire.com/article/93","1710532761","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","true"
+"4294971317","2026-08-13T12:15:47.000Z","https://docs.qie.digital/qie-oracle/introduction","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","webpage","false"
+"4294971313","2026-08-13T07:37:47.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","document","false"
+"4294971312","2026-08-13T07:37:40.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","document","false"
+"4294971311","2026-08-13T07:02:58.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.046Z","web","false","","photo","true"
+"4294971310","2026-08-13T06:55:12.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","4294971309","","false"
+"4294971309","2026-08-13T06:55:08.000Z","🌐 QIE ECOSYSTEM — IMPORTANT LINKS
+Your quick-access guide to building, using and exploring the QIE ecosystem.
+🧑‍💻 BUILD ON QIE
+Main: qie.digital
+Developer Docs & SDK: docs.qie.digital
+Token Creator: Create a Token on QIEDEX
+QIEDEX / Router Contracts: qiedex.qie.digital
+Oracles: https://docs.qie.digital/qie-oracle/introduction
+Hackathons: hackathon.qie.digital
+🌉 BRIDGES & DEFI
+QUSDC Bridge: stable.qie.digital
+ETH & BNB Bridge: bridge.qie.digital
+Cosmos Bridge: cosmos.qie.digital
+QIElend: qiel","-2930400607","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","webpage","true"
+"4294971307","2026-08-12T11:05:16.000Z","New Listing Alert on #WEEX🔔
+
+Dear WEEXers, We are pleased to announce that $QIE trading is now live on WEEX.
+
+🔹Listing Time: Aug 12, 2026, 09:00 (UTC)
+
+📱Register on WEEX: https://bit.ly/44qKAwK
+📖Details: https://www.weex.com/help/articles/k1xy0upsb22zn4pims46a97o
+
+Trade Now: QIE/USDT
+
+🐦 Twitter: https://twitter.com/WEEX_Official
+📌 Telegram Group: https://t.me/WeexGlobal_Group
+#QIE #WEEX #spotListing
+
+
+About WEEX 💰
+
+WEEX EN ✈️| WEEX EN 2nd ✈️
+WEEX VN 🇻🇳| WXT Holders 💎
+Twitter 😉| Regist","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","photo","false"
+"4294971306","2026-08-12T06:28:57.000Z","📢 QIE Community Request
+
+We need your help collecting BitMart → QIE deposit transaction hashes on BitMart from the past 3–4 months.
+
+If you deposited QIE into your BitMart account during this period, please submit your QIE deposit transaction hash through the form below.
+
+🔗 https://docs.google.com/forms/d/1LUMUH5KL-yyKKxoBUB58nEvEi6MHLU4m-4l5gwEIVw8/edit
+
+⚠️ Only submit your transaction hash. Never share your private key, seed phrase, password, or other sensitive information.
+
+Your contributio","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","webpage","false"
+"4294971304","2026-08-11T03:48:40.000Z","🪂 Massive airdrops are here! 
+WEEX WE-Launch – QIE Blockchain (QIE) is here #WELaunch! 🌟 #QIE
+
+📢 Commit WXT via WE-Launch to share 10,000 USDT Airdrop! 
+
+🎁 Limited-Time Exclusive Bonus
+Users who have never participated in any WE-Launch event before the start of this event and who successfully join this event and meet the airdrop eligibility requirements will receive double their final airdrop reward.
+The additional reward is subsidized by WEEX and is available only to eligible first-time WE-","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","photo","true"
+"4294971301","2026-08-10T10:25:00.000Z","🟢 Progress check, builders. 🛠
+QIE Hackathon 3 is in full swing. Show us what you're working on.
+Reply with:
+
+• What you're building
+• Your track
+• One win + one blocker this week
+
+Screenshots, repos, rough demos, broken localhost, all welcome. 👀
+
+Stuck on something? Drop it here. Someone in this group has probably already solved it.
+Let's see those commits.","1359014225","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","","true"
+"4294971300","2026-08-10T10:24:07.000Z","","7681454630","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","","false"
+"4294971297","2026-08-09T15:40:08.000Z","https://x.com/qieblockchain/status/2086477133522915586?s=20","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","webpage","false"
+"4294971293","2026-08-09T11:17:54.000Z","Thank you","7285301658","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","4294971292","","false"
+"4294971292","2026-08-09T11:15:05.000Z","By creating qie wallet","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","4294971291","","false"
+"4294971291","2026-08-09T11:11:53.000Z","How can I get a free domain?","7285301658","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","","false"
+"4294971290","2026-08-09T11:11:04.000Z","Good pm","7285301658","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","","false"
+"4294971288","2026-08-08T06:04:46.000Z","Digital identity could become a new revenue stream for crypto exchanges. 
+
+We explore how exchanges can turn identity infrastructure into a business opportunity. 
+
+Read it on your preferred platform : 
+
+Medium: medium.com/@QIEecosystem/ 
+
+Cryptopolitan: cryptopolitan.com/qie-reveals-ho
+
+#QIE #exchange #QIEID #revenue #KYC #identity","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","webpage","true"
+"4294971287","2026-08-07T15:22:05.000Z","New Listing Alert on #WEEX🔔
+
+We are pleased to announce that QIE Blockchain (QIE) will soon be available on WEEX. Please stay tuned for upcoming announcements regarding the listing details.
+
+🔹Listing Time: TBD
+
+📱Register on WEEX: https://bit.ly/44qKAwK
+📖Details: https://www.weex.com/help/articles/si6xe4v67zx9bnngwpic6oa1
+
+🐦 Twitter: https://twitter.com/WEEX_Official
+📌 Telegram Group: https://t.me/WeexGlobal_Group
+
+#QIE #WEEX #PreListing
+
+About WEEX 💰
+
+WEEX EN ✈️| WEEX EN 2nd ✈️
+WEEX VN 🇻","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","photo","true"
+"4294971286","2026-08-06T14:05:01.000Z","Anyone able to withdraw $QIE from BitMart?
+
+If yes, share the transaction hash to @Riad_QIE.
+
+Recent withdrawal or previous past withdrawal.","1710532761","QIE Developers Community","2026-09-16T12:04:25.518Z","web","false","","webpage","false"
+"4294971284","2026-08-06T12:08:07.000Z","","7093580152","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971279","2026-08-06T06:17:05.000Z","","1348719110","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971278","2026-08-05T16:38:31.000Z","QIE Hackathon 3 offers 5 categories for builders.
+
+Choose the category that fits your project and start building.
+
+🟣 DeFi & Financial Infrastructure
+🟣 AI + Autonomous Agents
+🟣 Consumer Apps & Social
+🟣 Commerce & Real World
+🟣 Developer Infrastructure & Tooling
+
+Register today:
+👉 hackathon.qie.digital","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971277","2026-08-05T10:08:00.000Z","Every swap, every liquidity position, and every on-chain transaction contributes to a stronger DeFi ecosystem.
+
+📊 QIEDEX Stats
+💧 Liquidity: $17.43K 
+📈 Volume: $121.29K 
+👥 Active Pairs: 32
+
+Track the latest analytics:
+🌐 swap.dex.qie.digital/analytics
+
+#QIEDEX #DeFi #QIEBlockchain","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294971276","2026-08-05T06:51:45.000Z","","829723250","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971275","2026-08-05T05:49:13.000Z","📢 Notice to the QIE Community
+
+Following BitMart's recent announcement, we would like to clarify that QIE Blockchain and the QIE ecosystem remain fully operational.
+
+QIE coin is available for trading on:
+
+✅ MEXC
+✅ Coinstore
+✅ BingX
+✅ LBank
+✅ BiFinance
+✅ Biconomy
+✅ QIEDEX
+
+Thank you for being part of the QIE community.","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294971274","2026-08-05T05:18:11.000Z","","829723250","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971273","2026-08-04T16:58:03.000Z","veridichain was 2nd?","1087724854","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294971272","","false"
+"4294971272","2026-08-04T13:54:47.000Z","QIE Hackathon 2 concluded with record participation.
+
+See how the community is growing and what's next with Hackathon 3.
+
+📖 https://medium.com/@QIEecosystem/qie-blockchain-hackathon-2-concludes-with-record-participation-as-hackathon-3-launches-on-1-august-cb49d72c604f?sharedUserId=QIEecosystem","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","false"
+"4294971271","2026-08-04T08:25:08.000Z","🚀 WQIE is ready to go.
+
+The updated WQIE contract has been verified on Etherscan, making it easy to verify, trade, and bridge your assets.
+
+🔗 https://etherscan.io/token/0xac8d365ecc9074a679f75b3e6b2bbf303e466728
+
+#Ethereum #QIEBlockchain #WQIE","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971270","2026-08-04T07:12:40.000Z","https://x.com/qieblockchain/status/2084537678713008390?s=20","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","false"
+"4294971269","2026-08-04T06:09:07.000Z","The next billion users won't join Web3 because it's complicated. 
+
+They'll join because it's simple. 
+
+Simple onboarding. 
+Simple identity. 
+Simple access. 
+
+That's the future worth building. 
+
+#Web3 #Blockchain #QIEID #QIEPass","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971268","2026-08-03T10:07:36.000Z","","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971267","2026-08-03T09:29:21.000Z","","817476287","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971266","2026-08-03T08:52:26.000Z","Notice:
+We have temporarily stopped adding new members to the channel for a few days due to spam activity.
+All join requests will be reviewed and approved first. Once approved, members will be added to the channel.
+Thank you for your patience and understanding.","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971265","2026-08-03T06:26:25.000Z","🌉 The QIE ↔️ Cosmos Bridge is back online!
+
+Move QIE between chains in ~45 seconds with zero bridge fees.
+
+Fast. Native. Secure.
+
+🔗 cosmos.qie.digital
+
+#QIEBlockchain #Cosmos #IBC","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971264","2026-08-03T04:55:58.000Z","Web2 gave us usernames. 
+Web3 gave us wallets. 
+
+The next evolution is on-chain identity. 
+
+A future where one identity unlocks every dApp, simplifies onboarding, and gives users control over their digital presence. 
+
+That's the vision we're building with QIE Pass. 
+
+#Web3 #ID","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971254","2026-08-02T14:07:33.000Z","Registration for QIE Hackathon 3 is now OPEN. 
+
+$17,000 Prize Pool 
+
+Mainnet Only 
+
+Build the Company. Not the Demo. 
+
+Register now: hackathon.qie.digital
+
+$QIE #building #hackathon #crypto","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971251","2026-08-02T11:18:22.000Z","Why are you using QIE Lend?
+
+💰 Earn passive yield
+🔒 Borrow while keeping your assets
+⚡️ Fast and decentralized
+
+Tell us what brought you to QIE Lend. 👇
+
+#QIELend #DeFi","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294971234","2026-08-02T03:10:06.000Z","Yes","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294971193","","false"
+"4294971193","2026-08-01T18:56:13.000Z","Stupid Spammers.","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971152","2026-08-01T09:15:23.000Z","Crypto wasn't built for passwords, repeated KYC, and endless wallet addresses.
+
+Discover how QIE ID and QIE Pass are simplifying Web3 with one identity for everything.
+
+Read more 👇
+
+https://cryptoslate.com/press-releases/qie-blockchain-unveils-qie-id-qie-pass-the-identity-layer-of-web3/","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","false"
+"4294971128","2026-08-01T03:01:12.000Z","GM, QIE Community. ☀️
+
+Every transaction, every builder, every new wallet and every idea moves the ecosystem forward.
+
+Thanks for being part of the journey.
+
+Here's to another month of building, shipping, and growing together. 🚀
+
+QIE to the MOON!
+
+#QIE #Web3","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971096","2026-07-31T11:21:30.000Z","Mainnet Only
+
+No prototypes.
+
+No testnet-only submissions.
+
+Build on QIE Mainnet.","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294971095","2026-07-31T10:52:41.000Z","QIE Hackathon 3 opens August 1.
+
+This isn't a weekend demo hack. It's 4 months to ship a real product on QIE mainnet, get actual users, and prove traction.
+
+What you can build:
+• DeFi & payments
+• AI + autonomous agents
+• Consumer & social apps
+• Commerce & real-world
+• Dev tooling & infra
+
+$17,000 in prizes. Half unlocks on 90-day traction, plus a $2,500 Most Traction award. Contracts stay open source and live on mainnet. 
+
+Your work, your repo.
+
+Ideas are cheap. Shipping is everything.
+
+Regist","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971092","2026-07-31T10:39:52.000Z","","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294971091","2026-07-31T10:23:21.000Z","BitMEX stopped. 
+BitMart stopped. 
+FTX stopped. 
+
+Don't wait for the next one. 
+
+Use QIE Wallet. 
+
+Your Keys. Your Wallet. Your Crypto. 
+
+Download today: qiewallet.me","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294971089","2026-07-31T07:44:32.000Z","The reward structure reflects that philosophy. Build quality absolutely matters, but so do the idea, execution, and the ability to validate that you're solving a real problem. 
+
+Distribution isn't about becoming a marketing expert overnight; it's about showing that you've identified the right audience and can get your product in front of them.
+
+Using tools like Claude Code may increase development costs, but the judging criteria are meant to reward creating products with real-world potential, no","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971088","2026-07-31T07:44:18.000Z","You apply to YC. less than 1% get selected. Does that mean the other 99% built bad companies? Not at all. YC selects startups based on its own evaluation criteria.
+
+The same applies here. We choose ideas that align with our judging criteria. Not getting selected isn't the end of the world.
+
+The goal should be to build products that solve real problems for the masses, not just products optimized to win a QIE hackathon.","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971087","2026-07-31T07:35:53.000Z","what do you mean by idea, build and distribution percentage? 
+
+I'm talking about your reward structure not your judging criteria. 
+
+i mean, you won't pick an app if it's not properly built, so saying 'one should put more energy into learning how to consistently get in front of the right people' is out of context based on what I'm talking about, don't avoid it. 
+
+this is a hackathon not a buildathon, I don't see how someone not learning how to consistently get in front of the right people your co","6841973986","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294971086","","true"
+"4294971086","2026-07-31T07:12:35.000Z","Idea is 5%.
+Build is 15%.
+Distribution is 80%.
+
+Put your energy into learning how to consistently get in front of the right people. Not just building. Blaming QIE make no sense here .","1359014225","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294971085","2026-07-31T06:25:15.000Z","good morning qie team.
+
+there are a few things that I'm confused about that I'll like clarification on please. 
+
+first, thank you guys for giving builders the opportunity to building great things. 
+
+for the Qie hackathon 02, for winners, do you guys plan to give them their remaining 50%?
+
+there's no clear detail on what you mean by traction or users, so if a project hits 100 users, the founder can DM for his or her remaining 50%?
+
+for the Qie hackathon 03, I believe it's $17,000 for 4months. 4MO","6841973986","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","true"
+"4294971009","2026-07-30T12:08:03.000Z","","5033276738","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970998","2026-07-30T05:39:54.000Z","5 Tracks 
+
+Which track are you building on QIE Hackathon 3? 
+
+🤖 AI
+💰 DeFi
+🌐 Consumer Apps
+🛒 Commerce
+🛠  Developer Tools
+
+ youtu.be/TcBsNZMm214
+
+$QIE #hackathon #building #cryptocurrency","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","false"
+"4294970996","2026-07-30T03:17:53.000Z","","5074291482","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970994","2026-07-30T02:37:07.000Z","","8914414316","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970983","2026-07-29T18:07:59.000Z","","8682127291","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970982","2026-07-29T15:49:29.000Z","","8861766394","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970980","2026-07-29T14:27:46.000Z","","8797319015","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970976","2026-07-29T13:19:16.000Z","","8707834172","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970970","2026-07-29T12:38:01.000Z","","2011320721","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970964","2026-07-29T11:39:44.000Z","","8828635498","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970963","2026-07-29T10:09:29.000Z","","8792703896","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970962","2026-07-29T09:03:26.000Z","","8703580816","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970960","2026-07-29T06:28:20.000Z","🎉 Spin. Win. Earn.
+
+QIE Wallet users are now winning 1 QIE Coin directly from the Spin Wheel! 🪙
+
+Want more spins?
+
+Simply make transactions using QIE Wallet to earn spin chances and unlock exciting rewards.
+
+Start transacting. Start spinning. 🚀
+
+Download QIE wallet: https://www.qiewallet.me/
+
+#QIE #QIEWallet #Web3 #CryptoRewards","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294970959","2026-07-29T05:52:27.000Z","","8938273822","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970958","2026-07-29T04:43:18.000Z","","8858484318","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970957","2026-07-29T04:36:18.000Z","","5074291482","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970956","2026-07-29T01:59:36.000Z","","8612596098","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970953","2026-07-28T15:34:08.000Z","","8590290555","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970949","2026-07-28T13:24:16.000Z","Four months. 
+
+One opportunity. 
+
+Build something people actually use. 
+
+QIE Hackathon 3 launches on August 1st.
+
+ youtube.com/watch?v=a__kdI 
+
+#QIE #Hackathon #dev #defi #ai","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","true"
+"4294970948","2026-07-28T13:23:42.000Z","","8819582031","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970947","2026-07-28T11:23:54.000Z","","7592274911","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970946","2026-07-28T10:07:36.000Z","","8659089957","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970945","2026-07-28T09:04:49.000Z","","7746715585","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970944","2026-07-28T08:49:16.000Z","QIE Blockchain: The Identity Layer of Web3
+
+
+https://zycrypto.com/qie-blockchain-the-identity-layer-of-web3/
+
+https://hackernoon.com/qie-blockchain-the-identity-layer-of-web3
+
+https://cryptodaily.co.uk/2026/07/qie-blockchain-the-identity-layer-of-web3","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","true"
+"4294970940","2026-07-28T07:44:25.000Z","","7796360932","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970939","2026-07-28T07:20:09.000Z","⚠️ Attention QIE Holders
+
+BitMart has announced the orderly wind-down of its platform operations. If you hold QIE on BitMart, please withdraw your tokens to your wallet or another supported exchange as soon as possible. Don't wait until the last minute.
+
+
+Thank you for your support. 💙","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970926","2026-07-28T04:03:13.000Z","","8835863581","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970898","2026-07-28T00:54:18.000Z","","8772690958","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970860","2026-07-27T15:24:18.000Z","https://discord.gg/4Jqzjg5fw","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970858","webpage","false"
+"4294970859","2026-07-27T14:40:50.000Z","New zealy","6242943013","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970858","2026-07-27T11:04:38.000Z","Please can i have a working discord link of the projecy?","5512544678","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970854","","false"
+"4294970857","2026-07-27T01:03:26.000Z","","8310287947","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970856","2026-07-26T21:25:59.000Z","","1552207454","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970854","2026-07-26T01:22:15.000Z","📢 The $QIE Trading Contest is LIVE on LBank!
+
+🏆 Share $5,000 in rewards by trading $QIE.
+
+Join now before time runs out! ⏳
+
+https://www.lbank.com/event-new/10002214-QIE-trading-contest","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","true"
+"4294970853","2026-07-25T20:53:40.000Z","Hey guys, where can i apply for any openings availble in the qie team?","726800283","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970852","2026-07-25T09:35:08.000Z","Your crypto isn't truly yours until you control the keys. 
+
+QIE Wallet gives you these rights with its non-custodial feature. 
+
+It's your time to own your crypto. Secure your future. 
+
+QIE wallet: qiewallet.me 
+
+#QIE #QIEWallet #Web3","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294970850","2026-07-24T11:50:50.000Z","","6050019330","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970849","2026-07-24T05:08:30.000Z","Today is the day. Are you ready to trade $QIE on Lbank?","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","false"
+"4294970847","2026-07-23T09:39:14.000Z","","5512544678","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970846","2026-07-23T06:38:21.000Z","Big thanks to Cryptopolitan for covering QIE Blockchain! 
+
+If you want to see how we're redefining Web3 identity, this is a great read. 
+
+cryptopolitan.com/qie-blockchain
+
+ #qieblockchain #qieID #identity","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","true"
+"4294970843","2026-07-23T05:45:48.000Z","For last time this is not group for zeally","-2930400607","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970841","2026-07-23T05:17:26.000Z","Please forward all your issues to the Zealy group.
+
+Thanks","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970839","","false"
+"4294970838","2026-07-20T10:29:05.000Z","WQIE Token Contract Migration Notice
+
+We're informing our community of a migration of the Wrapped QIE (WQIE) token contract on Ethereum.
+
+As part of ongoing improvements to our bridge infrastructure, we have deployed a new WQIE token contract to ensure improved reliability and long-term stability of the wrapped token.
+
+Previous contract (deprecated): 0x775AcF0Fae2B97789eA58e775789925ADE06b867
+New contract (active): 0xAC8d365ECc9074a679f75B3E6b2bbF303e466728
+
+What this means for you:
+
+Please upda","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","photo","true"
+"4294970837","2026-07-20T06:06:20.000Z","Please no more zealy chats for this group - you are in wrong group","-2930400607","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970836","2026-07-20T06:05:58.000Z","That is a marketing campaign unrelated to this group","-2930400607","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970834","","false"
+"4294970835","2026-07-20T04:41:08.000Z","Markets move fast. Emotions move faster.
+
+QBots combines AI-powered automation, proven trading strategies, and secure API-based execution to help traders stay disciplined in every market condition.
+
+If you're serious about smarter crypto trading, this is worth the read.
+
+👇 Read the full article: https://medium.com/@QIEecosystem/qbots-smarter-crypto-trading-fully-automated-bb31fbb3a933","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","webpage","true"
+"4294970834","2026-07-20T02:32:32.000Z","What is that?","5377885628","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970829","","false"
+"4294970833","2026-07-19T13:40:14.000Z","","5578746357","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970832","2026-07-19T06:42:21.000Z","","7026102010","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970831","2026-07-19T06:39:09.000Z","","5861057720","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970830","2026-07-18T17:21:06.000Z","Monday","1710532761","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970829","","true"
+"4294970829","2026-07-18T17:15:38.000Z","Bro when new zealy start?","6213930406","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","4294970827","","false"
+"4294970828","2026-07-18T15:55:33.000Z","When is the new Sprint start?","1882284055","QIE Developers Community","2026-09-16T12:04:25.519Z","web","false","","","false"
+"4294970827","2026-07-18T02:44:43.000Z","One ID. Multiple Exchanges. ⚡️
+
+QIE Pass is now live on Coinstore, Biconomy, and BiFinance, making KYC faster than ever.
+
+✅ No lengthy manual verification
+✅ Secure digital identity
+✅ Complete KYC in minutes
+
+Create your QIE Pass ID today with QIE Wallet.
+
+https://qiepass.qie.digital/
+#QIE #QIEPass #Web3 #Crypto #KYC","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","photo","true"
+"4294970826","2026-07-18T00:33:41.000Z","The missing piece of Web3 is identity.
+
+Discover how QIE Blockchain is solving it. 
+
+Read the full article: medium.com/@QIEecosystem/ 
+
+#qieblockchain #identity #web3","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","webpage","true"
+"4294970825","2026-07-16T15:54:10.000Z","builders and developers can now deploy contracts on DevStation without looking for gas on Qie mainnet 
+
+Devstation sponsors all deployments, 
+
+check it out here
+https://x.com/i/status/2077782282186699044","6088063867","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970824","2026-07-16T14:27:06.000Z","","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","document","false"
+"4294970823","2026-07-16T14:27:06.000Z","🚨 Introducing QIE Hackathon 3: Build the Company, Not the Demo.
+
+The next generation of Web3 builders starts here.
+
+💰 $17,000 Prize Pool
+🏗 Build on QIE Mainnet
+📅 Registration Opens August 1, 2026
+⏳ 4-Month Build Program
+🚀 Launch. Grow. Prove Traction.
+
+This isn't a weekend hackathon.
+
+It's a startup launch program designed for builders ready to ship real products with real users.
+
+Whether you're building DeFi, AI Agents, Consumer Apps, Commerce, or Developer Tools, QIE Hackathon 3 is your o","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","photo","false"
+"4294970822","2026-07-16T13:22:43.000Z","","979752321","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970821","2026-07-16T10:48:03.000Z","🚀 The QIE Bridge is now LIVE!
+
+Bridge assets seamlessly to the QIE ecosystem:
+🔹 USDC → wUSDC.eth
+🔹 USDT → wUSDT.eth
+🔹 wQIE.ETH
+🔹 wQIE.BSC
+
+Fast, secure, and built for multichain liquidity.
+
+Start bridging now:
+bridge.qie.digital
+
+#QIE #DeFi #Crypto #Bridge","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","photo","true"
+"4294970820","2026-07-16T08:49:59.000Z","","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","document","true"
+"4294970819","2026-07-16T08:49:59.000Z","Next hackathon details 🔥🔥🔥","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970818","2026-07-15T12:36:51.000Z","understood","6088063867","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970817","","false"
+"4294970817","2026-07-15T11:23:32.000Z","Next hackathon Will start on August and will end on December, You guys will have lots of time. And We will not select the same idea in winner list.","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970816","2026-07-15T10:34:51.000Z","just for clarity, since a new hackathon is on the horizon and we the winners of the just concluded one are still pushing and building towards the 100 active users, does the new one affect the old one?","6088063867","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970803","","false"
+"4294970815","2026-07-15T10:31:46.000Z","bring it on","6088063867","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970803","","false"
+"4294970814","2026-07-15T08:38:15.000Z","Some of today's builders started at QIE Hackathon 2. 
+
+The next success story could begin with QIE Hackathon 3. 
+
+#QIEHackathon3","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","document","true"
+"4294970813","2026-07-15T08:36:08.000Z","🚀 QIE HACKATHON 3 IS COMING 🚀
+
+Not the best demo. The best startup launched on QIE.
+
+This isn't a weekend hack. It's a 4-month launch program. Build it, ship it to mainnet, get real users, and walk away with funding AND traction. 🔥
+
+🛠 5 tracks: 
+
+DeFi 
+AI + Agents 
+Consumer & Social 
+Commerce 
+Dev Tooling","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970810","2026-07-15T05:30:57.000Z","","6679174373","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970809","2026-07-14T11:34:47.000Z","The QUSDC Bridge Portal is now live.
+
+Bridge your USDC from Ethereum to the QIE Blockchain and receive 1:1 QUSDC.
+
+Unlock the QIE DeFi ecosystem:
+• Trade on QIEDex
+• Supply QUSDC to QIELend and earn interest
+
+Start here:
+🌉 https://www.stable.qie.digital/","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","document","true"
+"4294970807","2026-07-14T00:49:03.000Z","yes i have prepared a new platform for the upcoming Hackathon event,, not the Explorer.
+
+
+because Explorer has been rejected outright","2059798778","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970803","","true"
+"4294970806","2026-07-13T22:01:29.000Z","Хорошего дня🤝 Разрабатываю ботов, скрипты, приложения, сайты разной сложности. Предоставляю широкий перечень услуг для ваших проектов от рассылок до обработки медиа. Продаю готовые базы данных. Автоматизирую рутинные задачи. Подробная информация по ссылке Большая благодарность за внимание🙏","8549254959","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970805","2026-07-13T21:44:25.000Z","Can you check my dm by any chance , would be highly obliged.","1138394294","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970803","","false"
+"4294970804","2026-07-13T20:45:42.000Z","Let’s go!","5167550420","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970803","","false"
+"4294970803","2026-07-13T20:42:23.000Z","New hackathon is coming .","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970802","2026-07-13T18:52:33.000Z","📢 Announcement from OneNov
+
+Hello QIE Community! 👋
+
+I want to share an update about the QIE Explorer project I've been building for the QIE Blockchain ecosystem.
+
+Although my project status is still ""Rejected"" from the previous QIE hackathon, I haven't given up. I continue to develop it with full dedication and passion. 🚀
+
+QIE Explorer currently has these key features:
+
+✅ Fully On-Chain Swap — Live and functional, connect directly with QIE Wallet Extension
+✅ Real-time Block & Transaction Ex","2059798778","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970801","2026-07-13T13:51:17.000Z","okkk Thank you sir","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970800","2026-07-13T13:25:30.000Z","You have been paid sir","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970799","2026-07-13T13:15:01.000Z","yessss","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970797","","false"
+"4294970798","2026-07-13T12:56:30.000Z","@coder_wizard","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970797","2026-07-13T12:52:40.000Z","Do you have intention to make this live and scale it?","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970795","","false"
+"4294970796","2026-07-13T11:52:54.000Z","🌈 New #listing
+
+🌟 $QIE (QIE Blockchain) will be listed on LBank! @HovRonQiblockchain
+
+QIE is a high-speed, low-cost blockchain built as a global identity layer through QIE Pass, connecting real-world payments and applications. QIE provides a Web2 experience with Web3 technology.
+
+❤️ Details: https://www.lbank.com/support/articles/2076480445414899712
+
+📌 Twitter: https://x.com/LBankUpdates/status/2076606309307150391
+
+ABOUT LBANK 
+🌐 Website        |  X (twitter)  
+💻 Registration | 📱Download","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","photo","true"
+"4294970795","2026-07-13T11:21:46.000Z","https://quantum-qie.vercel.app/  
+0x3C6b98A00746a9FD70e394127ec70CC35f20D0f9","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970793","","false"
+"4294970794","2026-07-13T11:07:36.000Z",".","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970792","","false"
+"4294970793","2026-07-13T11:05:55.000Z","Please share live website and mainnet contract","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970792","2026-07-13T10:54:16.000Z","okk thank you sir","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970791","","false"
+"4294970791","2026-07-13T10:53:30.000Z","Team will check shortly.
+
+Please wait","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970790","","false"
+"4294970790","2026-07-13T10:16:03.000Z","It is already deployed","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970789","","false"
+"4294970789","2026-07-13T08:59:40.000Z","Deploy your project on mainnet. Thanks","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970786","","false"
+"4294970788","2026-07-13T08:50:26.000Z","See announcement","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970787","2026-07-13T08:50:23.000Z","🎉 Congratulations once again to all our QIE Hackathon winners! 🏆
+We're pleased to confirm that all initial prize payouts (50%) have now been successfully sent to the wallet addresses provided by each winning team. 🚀
+The remaining 50% will be released once each project demonstrates meaningful traction and continued development on the QIE Mainnet.
+⏳ QuantumQie is still required to demonstrate its live Mainnet deployment before its initial prize payout can be processed.
+A huge thank you to all 4","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","webpage","true"
+"4294970786","2026-07-13T08:41:25.000Z","Hi I am Anjali from QuantumQie 
+Sir ,I checked my wallet and there are no transactions  on the address I shared. Could you please confirm whether the payment has been sent or not?","6819156070","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970785","2026-07-13T06:36:17.000Z","Maybe 15 July","6213930406","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970784","","false"
+"4294970784","2026-07-13T05:33:34.000Z","New zealy","6242943013","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970783","2026-07-12T08:08:48.000Z","happy sunday builders 🩵","6088063867","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970782","2026-07-11T13:52:12.000Z","Payment received thanks team ❤️","1882284055","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970781","2026-07-11T13:22:57.000Z","Sent","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970780","","false"
+"4294970780","2026-07-11T13:13:57.000Z","dm","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970779","","false"
+"4294970779","2026-07-11T13:13:09.000Z","Where should I drop it?","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970778","","false"
+"4294970778","2026-07-11T13:12:39.000Z","Address","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970777","","false"
+"4294970777","2026-07-11T13:11:49.000Z","Yes","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970776","","false"
+"4294970776","2026-07-11T13:11:36.000Z","zealy?","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970775","","false"
+"4294970775","2026-07-11T13:11:27.000Z","Haven't received mind","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970771","","false"
+"4294970774","2026-07-11T13:03:13.000Z","Received mine, thanks. This dev keep their promise like it👍, not like other project always talk liars","5202591385","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970768","","false"
+"4294970773","2026-07-11T13:01:51.000Z","Need new campaign admin sir","5967370837","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970772","2026-07-11T13:00:25.000Z","Thanks sir","6213930406","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970771","","false"
+"4294970771","2026-07-11T12:55:56.000Z","Soon","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970770","","false"
+"4294970770","2026-07-11T12:55:17.000Z","Need more campaign","6213930406","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970768","","false"
+"4294970769","2026-07-11T12:34:35.000Z","Yeah","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970768","","false"
+"4294970768","2026-07-11T12:33:28.000Z","zealy campaign?","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970767","2026-07-11T12:33:17.000Z","I haven't received mind","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970766","","false"
+"4294970766","2026-07-11T12:32:59.000Z","yes","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970765","","false"
+"4294970765","2026-07-11T12:31:44.000Z","payment done?","6984914415","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970764","2026-07-11T12:26:42.000Z","Payment received thanks team ❤️","5967370837","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970763","2026-07-11T12:16:22.000Z","All hackathon winners this is lesson of my life I share with everyone hard work & patience is give your long term success","1067728509","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970762","2026-07-11T11:50:54.000Z","If you Work well, there’s no need to worry, money will come to you automatically.","1067728509","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970761","2026-07-11T11:48:54.000Z","You need to focus in your (work) project not money","1067728509","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970760","","true"
+"4294970760","2026-07-11T10:08:03.000Z","What if, for example, you only manage to attract 50 users?","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970752","","false"
+"4294970759","2026-07-11T10:06:42.000Z","yes","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970758","2026-07-11T10:06:42.000Z","we will do our best to support you and reshare :)","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970757","2026-07-11T10:05:30.000Z","Is advertising allowed? For example, on X","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970756","","false"
+"4294970756","2026-07-11T10:04:20.000Z","here you can tag us","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970755","2026-07-11T09:59:29.000Z","Who can I send a dm please?","5167550420","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970752","","false"
+"4294970754","2026-07-11T09:59:02.000Z","Great 👍","5167550420","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970753","2026-07-11T09:55:21.000Z","we will see onchain if there is actual tx`s","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970752","2026-07-11T09:55:13.000Z","about 100 active users should suffice - not bots","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970751","2026-07-11T09:53:48.000Z","And if a project shows traction, will the remaining 50% be available at that moment?","5167550420","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970750","2026-07-11T09:53:26.000Z","Hello, how does the Qie team measure “traction” on a project?","5167550420","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970738","","false"
+"4294970749","2026-07-11T09:37:54.000Z","","8549254959","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970748","2026-07-11T09:16:06.000Z","200 done","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970747","","false"
+"4294970747","2026-07-11T09:12:21.000Z","Sir zealy distribution completed?  Or ongoing?","5967370837","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970746","2026-07-11T08:56:49.000Z","This is what we are clarifying here.","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970745","2026-07-11T08:55:50.000Z","Okay, why write about the same award twice if it's additional and the same?","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970744","2026-07-11T08:55:11.000Z","Prizes are paid 50% in USDT immediately. The remaining 50% in QIE is distributed in a later adoption phase, with timing and conditions","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970743","2026-07-11T08:52:20.000Z","its clear as daylight","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970742","2026-07-11T08:52:16.000Z","The remaining will not be paid out in usdt but in qie","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970741","2026-07-11T08:50:58.000Z","What is the point of this text then?","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970737","","false"
+"4294970740","2026-07-11T08:50:27.000Z","In my opinion, the formation of conditions is not correct","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970739","2026-07-11T08:50:07.000Z","Here, the reward for various things is mentioned twice in QIE, and the development reward comes as an additional","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970737","","false"
+"4294970738","2026-07-11T08:47:49.000Z","No, read the rules please.  R2500 total prize of which 50% was payable and the remaining will be paid in QIE when you show traction","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970737","","false"
+"4294970737","2026-07-11T08:46:56.000Z","Prize Benefits
+$1,250 USDT immediately
+$1,250 QIE tokens
+Additional $1,250 QIE after 100 users","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970736","2026-07-11T08:46:53.000Z","I mean the base reward QIE, paired with USDT, no additional tokens for development","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970735","","false"
+"4294970735","2026-07-11T08:41:45.000Z","you get final 50% once you prove traction and intention to scale your project","-2930400607","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","true"
+"4294970734","2026-07-11T08:32:43.000Z","Okay, thx, what about QIE?","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970733","2026-07-11T08:32:18.000Z","Only USDT sent now.","1359014225","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","","","false"
+"4294970732","2026-07-11T08:28:08.000Z","Received. Thank you","5464686369","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970712","","false"
+"4294970731","2026-07-11T08:20:38.000Z","@Prakashved","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970730","","false"
+"4294970730","2026-07-11T08:19:00.000Z","I understand, but it says 1250USDT + 1250 QIE immediately under the terms of the Hackathon, and 1250 QIE for development","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970729","","false"
+"4294970729","2026-07-11T08:14:56.000Z","Perhaps , you did not read our first announcement.
+
+Half prize will be distributed after monitoring your project data, growth and etc","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970728","","false"
+"4294970728","2026-07-11T08:13:51.000Z","Despite the information that all awards have been distributed, the USDT has been received, QIE no, you can check this in the scan","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970727","","false"
+"4294970727","2026-07-11T08:09:04.000Z","check announcement","1710532761","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970726","","false"
+"4294970726","2026-07-11T08:08:50.000Z","@Riad_QIE ?","865419808","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970717","","false"
+"4294970725","2026-07-11T08:04:52.000Z","Okay","6597203624","QIE Developers Community","2026-09-16T12:04:25.752Z","web","false","4294970723","","false"
