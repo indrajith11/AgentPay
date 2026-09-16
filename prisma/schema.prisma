@@ -15,6 +15,9 @@ model Merchant {
   category   String        @default("retail")
   currency   String        @default("ZAR")
   qiePassId  String?
+  qiePassRequestId  String? // QIE Pass verification request id (pvr_...)
+  qiePassStatus     String? // pending_kyc|pending_consent|consent_given|verified|consent_rejected|expired|failed
+  qiePassVerifiedAt DateTime? // when the signed VC was claimed + verified
   chainAddr  String? // on-chain MerchantRegistry address when live
   active     Boolean       @default(true)
   createdAt  DateTime      @default(now())
