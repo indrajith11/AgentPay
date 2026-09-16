@@ -111,6 +111,30 @@ The trust properties that make this commerce, not a demo:
 Tickets work in demo mode too (dashboard path unchanged): a signed-intent
 purchase mints the same bearer ticket without an on-chain tx.
 
+## Mainnet-ready (P6) — deploy pipeline proven, QIE mainnet 1990
+
+Every mainnet risk was retired on testnet first, and the full verification
+pipeline now ships in-repo:
+
+- **Official QIE Oracle feed verified live on mainnet** (`0x3Bc6…3D17`,
+  "QIE / USDT", 8 decimals, fresh heartbeat) — `deploy.ts` wires it
+  automatically on `--network qieMainnet` (testnet uses a clearly-labelled
+  MockAggregator).
+- **Explorer source verification automated** (`agentpay/contracts/scripts/p6_verify_sources.mjs`):
+  standard-JSON solc input + constructor args from a deploy-time journal
+  (`deploy.ts` records address, args, tx hash and gas for every contract) →
+  POST to the Etherscan-compatible API → poll to **"Pass - Verified"**.
+  **All 10 testnet contracts are source-verified** — inspect every source on
+  `testnet.qie.digital`.
+- **26-point post-deploy smoke** (`scripts/p6_smoke.mjs`): code at every
+  address, relayer/recorder wiring, feed price + freshness, refund window,
+  verifier/treasury authority — currently **26/26 PASS on testnet**.
+- **RPC truth**: mainnet endpoints are `rpc1mainnet` / `rpc2mainnet.qie.digital`
+  (verified `eth_chainId = 1990`); `rpc1.qie.digital` / `rpc.qie.digital` are
+  NOT eth JSON-RPC — configs and the SDK registry were corrected.
+- Full deploy rehearsal passes on an in-memory network; the mainnet deploy is
+  a single funded command (`npx hardhat run scripts/deploy.ts --network qieMainnet`).
+
 ## Architecture
 
 ```

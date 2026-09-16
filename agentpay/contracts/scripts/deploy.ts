@@ -23,6 +23,17 @@ async function main() {
   const network = hre.network.name;
   console.log(`Deploying on ${network} with ${deployer.address}`);
 
+  // P6: deployment journal — ctor args + receipts, consumed by the explorer
+  // source-verification pipeline (scripts/p6_verify_sources.mjs)
+  const journal: Array<{ name: string; address: string; args: unknown[]; txHash: string; gasUsed?: string }> = [];
+  const rec = async (name: string, c: { getAddress: () => Promise<string>; deploymentTransaction: () => ethers.ContractTransactionResponse | null }, args: unknown[]) => {
+    const address = await c.getAddress();
+    const tx = c.deploymentTransaction();
+    let gasUsed: string | undefined;
+    if (tx) { try { const r = await tx.wait(); gasUsed = r?.gasUsed?.toString(); } catch { /* keep going */ } }
+    journal.push({ name, address, args, txHash: tx?.hash ?? "", gasUsed });
+  };
+
   const balance = await ethers.provider.getBalance(deployer.address);
   console.log(`Deployer QIE balance: ${ethers.formatEther(balance)}`);
 
@@ -30,24 +41,28 @@ async function main() {
   const WQIE = await ethers.getContractFactory("WQIE");
   const wqie = await WQIE.deploy();
   await wqie.waitForDeployment();
+  await rec("WQIE", wqie, []);
   console.log("WQIE                  :", await wqie.getAddress());
 
   // 1) MerchantRegistry
   const MerchantRegistry = await ethers.getContractFactory("MerchantRegistry");
   const merchantRegistry = await MerchantRegistry.deploy(deployer.address);
   await merchantRegistry.waitForDeployment();
+  await rec("MerchantRegistry", merchantRegistry, [deployer.address]);
   console.log("MerchantRegistry      :", await merchantRegistry.getAddress());
 
   // 2) AgentRegistry
   const AgentRegistry = await ethers.getContractFactory("AgentRegistry");
   const agentRegistry = await AgentRegistry.deploy();
   await agentRegistry.waitForDeployment();
+  await rec("AgentRegistry", agentRegistry, []);
   console.log("AgentRegistry         :", await agentRegistry.getAddress());
 
   // 3) EscrowCore (10 min default refund window)
   const EscrowCore = await ethers.getContractFactory("EscrowCore");
   const escrow = await EscrowCore.deploy(600);
   await escrow.waitForDeployment();
+  await rec("EscrowCore", escrow, [600]);
   // relayer wiring happens after PayEndpoint deploys (see below)
   console.log("EscrowCore            :", await escrow.getAddress());
 
@@ -55,18 +70,21 @@ async function main() {
   const SettlementRouter = await ethers.getContractFactory("SettlementRouter");
   const settlementRouter = await SettlementRouter.deploy(deployer.address, deployer.address);
   await settlementRouter.waitForDeployment();
+  await rec("SettlementRouter", settlementRouter, [deployer.address, deployer.address]);
   console.log("SettlementRouter      :", await settlementRouter.getAddress());
 
   // 5) CreditPassport
   const CreditPassport = await ethers.getContractFactory("CreditPassport");
   const creditPassport = await CreditPassport.deploy(deployer.address);
   await creditPassport.waitForDeployment();
+  await rec("CreditPassport", creditPassport, [deployer.address]);
   console.log("CreditPassport        :", await creditPassport.getAddress());
 
   // 6) MandateVault
   const MandateVault = await ethers.getContractFactory("MandateVault");
   const mandateVault = await MandateVault.deploy(await agentRegistry.getAddress());
   await mandateVault.waitForDeployment();
+  await rec("MandateVault", mandateVault, [await agentRegistry.getAddress()]);
   console.log("MandateVault          :", await mandateVault.getAddress());
 
   // 7) PayEndpoint
@@ -80,6 +98,14 @@ async function main() {
     await creditPassport.getAddress()
   );
   await payEndpoint.waitForDeployment();
+  await rec("PayEndpoint", payEndpoint, [
+    await merchantRegistry.getAddress(),
+    await agentRegistry.getAddress(),
+    await mandateVault.getAddress(),
+    await escrow.getAddress(),
+    await settlementRouter.getAddress(),
+    await creditPassport.getAddress(),
+  ]);
   console.log("PayEndpoint           :", await payEndpoint.getAddress());
 
   // allow PayEndpoint to relay validated refunds to the escrow
@@ -116,6 +142,11 @@ async function main() {
     await creditPassport.getAddress()
   );
   await invoiceVault.waitForDeployment();
+  await rec("InvoiceVault", invoiceVault, [
+    await merchantRegistry.getAddress(),
+    await settlementRouter.getAddress(),
+    await creditPassport.getAddress(),
+  ]);
   console.log("InvoiceVault          :", await invoiceVault.getAddress());
 
   // 9) RecurringMandate
@@ -126,6 +157,11 @@ async function main() {
     await creditPassport.getAddress()
   );
   await recurringMandate.waitForDeployment();
+  await rec("RecurringMandate", recurringMandate, [
+    await merchantRegistry.getAddress(),
+    await settlementRouter.getAddress(),
+    await creditPassport.getAddress(),
+  ]);
   console.log("RecurringMandate      :", await recurringMandate.getAddress());
 
   // ---- wire recorder roles ----
@@ -161,6 +197,7 @@ async function main() {
     qieUsdOracle: "0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17", // official QIE mainnet QIE/USD feed
     usdFeedToken: FEED_TOKEN,
     usdFeedAddress: FEED_ADDR,
+    deployments: journal,
   };
 
   // ESM-safe __dirname equivalent (script may run as CJS or ESM depending on ts-node mode)

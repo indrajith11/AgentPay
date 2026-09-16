@@ -33,7 +33,10 @@ export const NETWORKS: Record<string, NetworkConfig> = {
   qieMainnet: {
     name: "QIE Mainnet",
     chainId: 1990,
-    rpcUrls: ["https://rpc.qie.digital/"],
+    rpcUrls: [
+      "https://rpc1mainnet.qie.digital/",
+      "https://rpc2mainnet.qie.digital/",
+    ],
     explorer: "https://mainnet.qie.digital",
     contracts: {}, // filled at P6 mainnet deploy — API unchanged
   },

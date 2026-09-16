@@ -23,9 +23,15 @@ export DEPLOYER_PRIVATE_KEY=0xyour_test_key
 npx hardhat run scripts/deploy.ts --network qieTestnet
 
 # mainnet deploy (submission target) — wires the OFFICIAL QIE Oracle QIE/USD feed automatically
+# (feed verified live: QIE/USDT 8-dec, $0.18001654 @ block 10.48M; RPC = rpc1mainnet.qie.digital —
+#  note: rpc1.qie.digital / rpc.qie.digital are NOT eth JSON-RPC endpoints)
 export DEPLOYER_PRIVATE_KEY=0xyour_main_key
 npx hardhat run scripts/deploy.ts --network qieMainnet
 # optional overrides: SETTLEMENT_TOKEN, USD_FEED_TOKEN, USD_FEED_ADDRESS
+
+# P6 verification pipeline (run after ANY deploy):
+node scripts/p6_smoke.mjs qieMainnet            # 26 read-only checks: code, wiring, feed, authority
+node scripts/p6_verify_sources.mjs qieMainnet   # push sources to explorer (Etherscan-v1 API), poll to "Pass - Verified"
 ```
 
 Output: `addresses/<network>.json` with WQIE + all 9 contract addresses + feed wiring.
