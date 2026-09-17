@@ -64,3 +64,20 @@ console.log("backup copied to scripts/.mainnet-deployer-backup.json (chmod 600, 
 
 // ensure gitignore covers it in agentpay repo context — it lives in root scripts/, root has own git
 console.log("DONE — next: cd agentpay/contracts && npm ci");
+
+// 4) restore research/ + worklog.md from /tmp doc backup (reset ghost wipes untracked dirs)
+const DOC_DIRS = ["research"];
+const DOC_FILES = ["worklog.md"];
+const BAK = "/tmp/my-project/docs-backup";
+// a) refresh backup from current disk (if disk has content)
+let diskHasDocs = false;
+for (const d of DOC_DIRS) { if (fs.existsSync(`${ROOT}/${d}`)) { diskHasDocs = true; fs.cpSync(`${ROOT}/${d}`, `${BAK}/${d}`, { recursive: true }); } }
+for (const f of DOC_FILES) { if (fs.existsSync(`${ROOT}/${f}`) && fs.statSync(`${ROOT}/${f}`).size > 500) { diskHasDocs = true; fs.copyFileSync(`${ROOT}/${f}`, `${BAK}/${f}`); } }
+if (diskHasDocs) console.log("doc backup refreshed ->", BAK);
+// b) restore disk from backup (if disk lost them)
+for (const d of DOC_DIRS) {
+  if (!fs.existsSync(`${ROOT}/${d}`) && fs.existsSync(`${BAK}/${d}`)) { fs.cpSync(`${BAK}/${d}`, `${ROOT}/${d}`, { recursive: true }); console.log(`restored ${d}/ from backup`); }
+}
+for (const f of DOC_FILES) {
+  if ((!fs.existsSync(`${ROOT}/${f}`) || fs.statSync(`${ROOT}/${f}`).size < 500) && fs.existsSync(`${BAK}/${f}`)) { fs.copyFileSync(`${BAK}/${f}`, `${ROOT}/${f}`); console.log(`restored ${f} from backup`); }
+}
