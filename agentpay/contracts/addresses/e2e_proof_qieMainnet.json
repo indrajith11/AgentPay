@@ -1,0 +1,234 @@
+{
+  "network": "qieMainnet",
+  "chainId": 1990,
+  "startedAt": "2026-09-17T04:09:05.264Z",
+  "steps": {
+    "fund_principal": "0x41e5d7f9a1739611878abfe3ba2483ffa685581a9998007aa89a15c66b7932b3",
+    "wrapQIE": "0xebeb864599b8583f995a1fe5eaae4b657824cd6c2fd36de231d815551e928074",
+    "approveMandateVault": "0xd8a4d6a97bc18befc83de37d10fb084384965fd217d728fac2a3243624077933",
+    "createMandate": "0x467922ac82518ed5181ae028bff34e43becf5af7f6b6e1a41fb2251c0dd54c98",
+    "authorizePayEndpoint": "0xe83ad48f8e2df959a7fb27f96f2c7374042a54e93046bbcc4b7204a1dc8ee819",
+    "payForCall#1": "0x6d8685a3ed57c2eb4dadee1df38b11fc8e15cc6697b4746de71bfc3a831bcd37",
+    "payForCall#2": "0xf89e9015317b737015b43180fc1a5598b45698384a4aad31b24a1709f40593b0",
+    "refundCall": "0xc1bf6a70040dd7eea99b23be0e2019778494aab7e47fd5bf3e448b6d0195c2c9",
+    "createInvoice": "0x5cb3a6d6cc6721113776151ea24e5195221c5cff9457469b3f8983da7166d9ef",
+    "approveInvoiceVault": "0xc0ffce4c52a3b18422028e46256c48cc7565145424f1d24b7773c4c195e8e7c4",
+    "payInvoice": "0x979cb05e5107dd6935e9c1c64f41fe54ae02a8e8ad6e8ac4748c646500acf9a7",
+    "approveRecurring": "0x5834822018fb3ac1b2496dc2b439e1eb972e38dac62f740278ee8aed2e1834e0",
+    "createSubscription": "0xb3f25ccfcf40d3d1b2076e538bfd7e369b8e0a048dff3a9b6337d2585982642a",
+    "chargeDue": "0x3201182e75f30a6e5c0cbf1b560e7eee3b1194bef7fae94a9f3da4817b92d293",
+    "setPayoutProfile": "0xbe9a34a6da898cfa0887061369293aabcdf0f2c4a976f26c81332256723ec80b",
+    "executeAutoWithdraw": "0x964851fe484f08d2374c7e72afc562d181c4fe5212d1e16843b21606481cd229"
+  },
+  "txs": [
+    {
+      "step": "fund_principal",
+      "hash": "0x41e5d7f9a1739611878abfe3ba2483ffa685581a9998007aa89a15c66b7932b3",
+      "at": "2026-09-17T04:09:08.978Z"
+    },
+    {
+      "step": "wrapQIE",
+      "hash": "0xebeb864599b8583f995a1fe5eaae4b657824cd6c2fd36de231d815551e928074",
+      "at": "2026-09-17T04:09:16.357Z"
+    },
+    {
+      "step": "approveMandateVault",
+      "hash": "0xd8a4d6a97bc18befc83de37d10fb084384965fd217d728fac2a3243624077933",
+      "at": "2026-09-17T04:09:19.788Z"
+    },
+    {
+      "step": "createMandate",
+      "hash": "0x467922ac82518ed5181ae028bff34e43becf5af7f6b6e1a41fb2251c0dd54c98",
+      "at": "2026-09-17T04:09:23.765Z"
+    },
+    {
+      "step": "authorizePayEndpoint",
+      "hash": "0xe83ad48f8e2df959a7fb27f96f2c7374042a54e93046bbcc4b7204a1dc8ee819",
+      "at": "2026-09-17T04:09:27.228Z"
+    },
+    {
+      "step": "payForCall#1",
+      "hash": "0x6d8685a3ed57c2eb4dadee1df38b11fc8e15cc6697b4746de71bfc3a831bcd37",
+      "at": "2026-09-17T04:09:30.723Z"
+    },
+    {
+      "step": "payForCall#2",
+      "hash": "0xf89e9015317b737015b43180fc1a5598b45698384a4aad31b24a1709f40593b0",
+      "at": "2026-09-17T04:09:41.917Z"
+    },
+    {
+      "step": "refundCall",
+      "hash": "0xc1bf6a70040dd7eea99b23be0e2019778494aab7e47fd5bf3e448b6d0195c2c9",
+      "at": "2026-09-17T04:09:52.628Z"
+    },
+    {
+      "step": "createInvoice",
+      "hash": "0x5cb3a6d6cc6721113776151ea24e5195221c5cff9457469b3f8983da7166d9ef",
+      "at": "2026-09-17T04:09:55.991Z"
+    },
+    {
+      "step": "approveInvoiceVault",
+      "hash": "0xc0ffce4c52a3b18422028e46256c48cc7565145424f1d24b7773c4c195e8e7c4",
+      "at": "2026-09-17T04:09:59.850Z"
+    },
+    {
+      "step": "payInvoice",
+      "hash": "0x979cb05e5107dd6935e9c1c64f41fe54ae02a8e8ad6e8ac4748c646500acf9a7",
+      "at": "2026-09-17T04:10:03.331Z"
+    },
+    {
+      "step": "approveRecurring",
+      "hash": "0x5834822018fb3ac1b2496dc2b439e1eb972e38dac62f740278ee8aed2e1834e0",
+      "at": "2026-09-17T04:10:07.187Z"
+    },
+    {
+      "step": "createSubscription",
+      "hash": "0xb3f25ccfcf40d3d1b2076e538bfd7e369b8e0a048dff3a9b6337d2585982642a",
+      "at": "2026-09-17T04:10:10.545Z"
+    },
+    {
+      "step": "chargeDue",
+      "hash": "0x3201182e75f30a6e5c0cbf1b560e7eee3b1194bef7fae94a9f3da4817b92d293",
+      "at": "2026-09-17T04:20:56.665Z"
+    },
+    {
+      "step": "setPayoutProfile",
+      "hash": "0xbe9a34a6da898cfa0887061369293aabcdf0f2c4a976f26c81332256723ec80b",
+      "at": "2026-09-17T04:21:00.587Z"
+    },
+    {
+      "step": "executeAutoWithdraw",
+      "hash": "0x964851fe484f08d2374c7e72afc562d181c4fe5212d1e16843b21606481cd229",
+      "at": "2026-09-17T04:21:03.575Z"
+    }
+  ],
+  "finalState": {
+    "merchantWQIE": "0.557396664911309992",
+    "deployerQIE": "7.656606220375",
+    "mandateBalance": "0.087606670177380016",
+    "routerWithdrawable": "0.0",
+    "roles": {
+      "principal": "0x473d73D49a46f60848040Dd5772969917D539932",
+      "agent": "0x762Ca2cF442E8E95F262398c14cF981a94B9b924",
+      "providerAcct": "0xE9203cE96E0fC05fBA81F73c56E1aD62c2D8d933"
+    },
+    "updatedAt": "2026-09-17T04:21:04.487Z"
+  },
+  "deployedContracts": {
+    "network": "qieMainnet",
+    "deployedAt": "2026-09-16T11:48:48.747Z",
+    "deployer": "0x33E00d801943D945DC5Ec92A2192425427023586",
+    "MerchantRegistry": "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+    "AgentRegistry": "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+    "EscrowCore": "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+    "SettlementRouter": "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+    "CreditPassport": "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E",
+    "MandateVault": "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+    "PayEndpoint": "0xb35b5693ea5c12dB23875032227A84C713bc9B5E",
+    "InvoiceVault": "0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D",
+    "RecurringMandate": "0x9c75059E6C48F0550990499F1068f878a65C047B",
+    "WQIE": "0x883E3098eF144f91818037936a722b8bd448074b",
+    "settlementToken": "0x883E3098eF144f91818037936a722b8bd448074b",
+    "qieUsdOracle": "0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17",
+    "usdFeedToken": "0x883E3098eF144f91818037936a722b8bd448074b",
+    "usdFeedAddress": "0x3Bc617cF3A4Bb77003e4c556B87b13D556903D17",
+    "deployments": [
+      {
+        "name": "WQIE",
+        "address": "0x883E3098eF144f91818037936a722b8bd448074b",
+        "args": [],
+        "txHash": "0x24ac0b9b93fe0430f2c647d6df9267ceed66b9993f54b02ea13916007c112ac1",
+        "gasUsed": "712790"
+      },
+      {
+        "name": "MerchantRegistry",
+        "address": "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+        "args": [
+          "0x33E00d801943D945DC5Ec92A2192425427023586"
+        ],
+        "txHash": "0x22af2e34a168fceee8a125dfc107cabf62080023dfcf250ccd9d672f7c493166",
+        "gasUsed": "971812"
+      },
+      {
+        "name": "AgentRegistry",
+        "address": "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+        "args": [],
+        "txHash": "0x82c5556744dffbd37000425c7e1a2ee346c7e4878c4fb0ff679cfaa08c787785",
+        "gasUsed": "824455"
+      },
+      {
+        "name": "EscrowCore",
+        "address": "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+        "args": [
+          600
+        ],
+        "txHash": "0x17d860b5d282918f0ce00ee09a1fffc0cae8b16fbd6633ed73d0d051c76470b0",
+        "gasUsed": "1005651"
+      },
+      {
+        "name": "SettlementRouter",
+        "address": "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+        "args": [
+          "0x33E00d801943D945DC5Ec92A2192425427023586",
+          "0x33E00d801943D945DC5Ec92A2192425427023586"
+        ],
+        "txHash": "0x6baab6cc058063e2db1e2c81e00ea36aea0dced0f4c8eec1363f9ea0042e96b0",
+        "gasUsed": "1739476"
+      },
+      {
+        "name": "CreditPassport",
+        "address": "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E",
+        "args": [
+          "0x33E00d801943D945DC5Ec92A2192425427023586"
+        ],
+        "txHash": "0x7cab2eaf0f8890e282cc7537e3e8ef372e92ddc318b4904f4fa3ccf12c100d55",
+        "gasUsed": "710399"
+      },
+      {
+        "name": "MandateVault",
+        "address": "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+        "args": [
+          "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20"
+        ],
+        "txHash": "0xd57f3c9993291090b121270abb2ec10dac2d948587cccc653afda58e0a8a8453",
+        "gasUsed": "1052193"
+      },
+      {
+        "name": "PayEndpoint",
+        "address": "0xb35b5693ea5c12dB23875032227A84C713bc9B5E",
+        "args": [
+          "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+          "0xB129871e87c3E3B53cFd50f31290fDA9343D4F20",
+          "0x4f1bb87B31648c9D265CbF743AeB107aA83E8906",
+          "0xB5aa93a3B7611F3eEeeB27aE52C1DB6f65E27f8a",
+          "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+          "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+        ],
+        "txHash": "0x2e1d2524f54002fc1c139cb65d25af300b6584e7827024819ba8d42a180b8527",
+        "gasUsed": "2523339"
+      },
+      {
+        "name": "InvoiceVault",
+        "address": "0xC2a17d8a84e29A9f5726C76142e5aE1B2872989D",
+        "args": [
+          "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+          "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+          "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+        ],
+        "txHash": "0xa597868827c828ba36bc9b74bdd375083a9244b2a024e9218697525a0e28f6f0",
+        "gasUsed": "1303182"
+      },
+      {
+        "name": "RecurringMandate",
+        "address": "0x9c75059E6C48F0550990499F1068f878a65C047B",
+        "args": [
+          "0x0049BA098899713C0c24C2214252e4b71D9dC7b2",
+          "0x6b22be3198Dd66289874A6E6Ad35DBEF6e9d4076",
+          "0x837E6dCE04671d58703f7030906F6fCd32D6aA2E"
+        ],
+        "txHash": "0xd93877d022de286eaf4b3151b9a038d95a1daf78f2502d63b52f44c4f48d2685",
+        "gasUsed": "1440813"
+      }
+    ]
+  }
+}

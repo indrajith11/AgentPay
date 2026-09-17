@@ -7,6 +7,9 @@ export type Merchant = {
   category: string;
   currency: string;
   qiePassId: string | null;
+  qiePassStatus?: string | null;
+  qiePassRequestId?: string | null;
+  qiePassVerifiedAt?: string | null;
   chainAddr: string | null;
 };
 

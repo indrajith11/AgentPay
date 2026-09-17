@@ -1,4 +1,6 @@
-# AgentPay × MerchantPilot
+# AgentPay — the QIE Agent Commerce Protocol (× MerchantPilot)
+
+> Note: "AgentPay" is also used by unrelated products from Alchemy, Celer and OSL. This project is **AgentPay, the QIE Agent Commerce Protocol** — built natively on QIE for QIE Hackathon 3.0.
 
 **Merchant Operating System on QIE — agentic commerce payment infrastructure for Track 04 (Commerce & Real World), QIE Hackathon 3.0 Mainnet Edition.**
 
@@ -7,6 +9,8 @@ One stack, three businesses in a box:
 1. **Merchant payments** — QR / invoice / subscription checkout with on-chain settlement, escrow protection and automated payouts.
 2. **Agent commerce (x402-style)** — machines pay machines: per-call mandates, spend caps, a machine paywall endpoint, all metered on-chain.
 3. **On-chain credit** — every payment feeds a CreditPassport score (300–850) that unlocks trust for undercollateralized commerce.
+
+**QIE ecosystem integrations:** official QIE/USD Oracle (live quoting) · QIE Pass reusable KYC (merchant verification — sandbox-live, P10) · QIE Wallet flow alignment.
 
 No passwords, no email, no seed phrases: **your wallet is your account** (SIWE, EIP-4361) with **passkey step-up** (WebAuthn) for money-moving actions.
 

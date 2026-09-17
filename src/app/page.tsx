@@ -15,6 +15,7 @@ import { PasskeySecurityCard } from "@/components/merchant/security";
 import { MachinePaywall, CreditPassportCard, ChainSetup } from "@/components/merchant/machine";
 import { LoginScreen, useSession, short } from "@/components/merchant/login";
 import { ChainTruthPanel } from "@/components/merchant/chaintruth";
+import { QiePassCard } from "@/components/merchant/qiepass";
 import type { Merchant } from "@/lib/agentpay";
 
 export default function Home() {
@@ -108,6 +109,9 @@ export default function Home() {
 
           <Kpis data={data} />
 
+          {/* QIE Pass — reusable KYC (P10): one approval in QIE Wallet, on-chain attestation */}
+          <QiePassCard merchant={data.merchant} onChanged={refresh} />
+
           <Tabs defaultValue="overview">
             <TabsList className="flex flex-wrap h-auto gap-1">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -187,7 +191,7 @@ function ShellChrome({
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-700 text-white font-black">A</div>
             <div>
               <h1 className="text-sm font-bold leading-tight text-emerald-950">AgentPay</h1>
-              <p className="text-[10px] text-muted-foreground leading-tight">Merchant Operating System on QIE · Track 04</p>
+              <p className="text-[10px] text-muted-foreground leading-tight">The QIE Agent Commerce Protocol · Merchant OS · Track 04</p>
             </div>
           </div>
 
